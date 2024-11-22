@@ -1,0 +1,226 @@
+* {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgb(15, 76, 129);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 76, 129, 1) 0%,
+    rgba(15, 76, 129, 1) 12%,
+    rgba(11, 112, 162, 1) 32%,
+    rgba(0, 212, 255, 1) 52%
+  );
+}
+/* container sidenav  logo contact search */
+
+.container_header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 20vh;
+  background-color: #0f4c81;
+  position: fixed;
+}
+.container_logo {
+  width: 50%;
+  height: 50%;
+}
+.logo {
+  width: 40%;
+  height: 100%;
+}
+.logo_enseigne {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.petit_icones {
+  max-width: 15px;
+  max-height: auto;
+}
+.container_contact {
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+.contact {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact a {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  font-size: medium;
+  color: #ffc196;
+}
+#calendar {
+  margin-right: 3px;
+}
+.sidenav {
+  display: flex;
+  width: 75%;
+  height: 50%;
+}
+.sidenav :nth-child(1) {
+  width: 35%;
+}
+.sidenav :nth-child(2) {
+  width: 35%;
+}
+.sidenav :nth-child(3) {
+  width: 50%;
+}
+.sidenav :nth-child(4) {
+  width: 50%;
+}
+.sidenav a {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  text-wrap: nowrap;
+  color: #ffc196;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  text-decoration: none;
+}
+.container_count {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 50%;
+}
+
+.count {
+  width: 20%;
+}
+.basket {
+  display: flex;
+  margin: auto;
+  width: 20%;
+}
+.count_icon {
+  max-width: 20px;
+  max-height: auto;
+  margin-right: 12vh;
+}
+.search {
+  width: 100%;
+  margin-right: 5vh;
+}
+.form-example {
+  display: flex;
+}
+#site-search {
+  background-color: #0f4c81;
+  border: 1px solid;
+}
+button {
+  width: 20%;
+  background-color: #0f4c81;
+  border: 0.5px solid;
+}
+.burger {
+  width: 10%;
+}
+
+#iconBurger {
+  display: none;
+  margin-top: 4vh;
+  float: right;
+  background-color: white;
+  border: 1px solid;
+  width: 8vh;
+  height: 7vh;
+  background-color: black;
+}
+#iconBurger span {
+  display: block;
+  height: 1vh;
+  width: 6vh;
+  margin: 1vh;
+  background-color: black;
+}
+
+/* main */
+
+main {
+  width: 100%;
+  height: 70vh;
+  padding-top: 20vh;
+  display: flex;
+}
+
+/* pictures and choice frames */
+
+.pictures_selection {
+  display: flex;
+  margin-top: 2vh;
+  margin: auto;
+}
+
+/* p : lunettes*/
+#men-frames,
+#women-frames,
+#child-frames {
+  text-align: center;
+  text-decoration: underline #0f4c81;
+  border-radius: 15%;
+  font-family: "Dancing Script";
+  text-shadow: #0f4c81;
+}
+
+.lunettes_pictures {
+  border-radius: 25%;
+  border: 1px solid #0f4c81;
+}
+/* photos choix lunettes */
+.main-women,
+.main-men,
+.main-childs {
+  padding: 0 25px 0 25px;
+}
+
+/*aside*/
+
+aside {
+  font-size: small;
+  width: 15%;
+  background-color: #0f4c81;
+  color: #ffc196;
+}
+ul {
+  text-align: center;
+  list-style: none;
+}
+li {
+  margin-top: 5vh;
+}
+/* section offres du moment*/
+section {
+  height: 100vh;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-size: xx-large;
+  margin: 5vh 0 10vh 0;
+}
+.offres {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  border: 1px solid red;
+}
+#photo_offre {
+  object-fit: cover;
+}

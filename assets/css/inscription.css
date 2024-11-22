@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  background-color: red;
+  width: 100%;
+  height: 100vh;
+}
+.connection,
+.inscription {
+  background-color: aqua;
+  margin: auto;
+}
+.civility_choice {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+form {
+  /* On centre le formulaire */
+  margin: 0 auto;
+  width: 400px;
+  /* Le contour du formulaire */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: circle;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+.input,
+textarea {
+  font: 1em sans-serif; /* On s'assure que les champs texte ont la même police Par défaut*/
+  width: 300px; /* Taille uniforme pour des champs */
+  box-sizing: border-box;
+  border: 1px solid #999; /* On utilise la même bordure que pour le formulaire */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000; /* On rajoute une mise en avant pour les éléments avecle focus. */
+}
+
+textarea {
+  vertical-align: top; /* On aligne les textes sur plusieurs lignes avec leur  libellé. */
+  height: 5em; /* On fournit un peut d'espace pour saisir du texte. */
+  resize: vertical;
+}
