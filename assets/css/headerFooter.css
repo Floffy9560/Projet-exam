@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "boecklins";
+  src: url(/assets/boecklins-universe/Boecklins\ Universe.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Domine", serif;
+}
+html {
+  width: 100%;
+
+  font-size: 100%;
+  position: relative;
+}
+html:before {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-image: url(/assets/img/photo\ papier\ peint.jpg);
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20vh;
+}
+main {
+  width: 80%;
+  padding-top: 5vh;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.name {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+}
+
+.navLink {
+  width: 100%;
+  text-decoration: none;
+  color: #c89f36;
+  font-size: 2vw;
+  font-family: "Dancing Script";
+  font-weight: bold;
+}
+.footerLink {
+  text-decoration: none;
+  color: #c89f36;
+  font-size: 1.5vw;
+}
+h1 {
+  margin: auto;
+  font-size: 7vw;
+  font-family: "boecklins";
+  color: #2c2c2c;
+  text-shadow: 4px 4px 4px black;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Dancing Script";
+  font-size: 7vw;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+  text-shadow: 10px 10px 20px;
+  color: #1e1e1e;
+}
+h3 {
+  text-align: center;
+  text-shadow: 0px 0px 20px;
+  font-size: 2vw;
+  color: #1e1e1e;
+}
+a {
+  color: black;
+}
+span {
+  font-size: 2vw;
+}
+
+/* -------------------------container logo sidenav search----------------------*/
+
+.menuContainer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(48, 108, 96, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 5px 10px #306c60;
+}
+
+.burgerMenu {
+  display: none;
+}
+#containerLogo {
+  display: flex;
+  height: 100%;
+}
+#logo {
+  width: 100%;
+  height: 100%;
+}
+.containerMenu {
+  width: 90%;
+  height: 100%;
+}
+.menu {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.spans {
+  width: 70%;
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+  text-align: center;
+  color: #c89f36;
+  text-shadow: 0px 0px 10px black;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+button {
+  width: 20%;
+  height: 80%;
+  border-radius: 10px;
+  border: 3px solid;
+  background: #306c60;
+}
+#site-search {
+  width: 70%;
+  height: 80%;
+  border-radius: 10px;
+  border: 3px solid;
+  color: black;
+}
+#site-search:focus {
+  outline: none;
+}
+.account {
+  width: 25%;
+  display: flex;
+  gap: 5vh;
+  justify-content: center;
+  align-items: center;
+}
+.account img {
+  height: 50px;
+}
+
+/*--------------------------------------------container-footer----------------------------*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 20vh;
+}
+.container-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5vh;
+  padding-bottom: 2vh;
+  background-color: #306c60;
+}
+.contact {
+  text-align: center;
+  width: 100%;
+}
+.contact p {
+  font-size: 1.5vw;
+}
+
+.links-footer {
+  width: 100%;
+  height: 100%;
+  gap: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container-follow {
+  width: 80%;
+}
+.follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoFollow {
+  height: 50px;
+}
+.copyright {
+  text-align: center;
+  border-top: 10px double #306c60;
+}
+#copyrightLogo {
+  height: 25px;
+}
+
+/*----------------------------media queries smartphone --------------------*/
+
+@media all and (max-width: 769px) {
+  .menuContainer {
+    display: none;
+  }
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    align-items: center;
+  }
+  .smartphoneHeader {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #306c60;
+  }
+  #containerLogo {
+    display: flex;
+    width: 25%;
+    height: 80%;
+  }
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .account {
+    display: flex;
+    width: 30%;
+    height: 100%;
+  }
+  #toggle {
+    display: none;
+  }
+
+  #label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    color: #c89f36;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+  }
+  .main_pages {
+    display: none;
+    width: 100%;
+    height: 80vh;
+    justify-content: space-around;
+    z-index: 55;
+    background-color: #306c60;
+  }
+  .main_pages a {
+    display: flex;
+    font-size: 3em;
+    justify-content: center;
+    height: 18%;
+  }
+
+  #toggle:checked + .main_pages {
+    display: block;
+  }
+  h1,
+  h2 {
+    font-size: calc(7vw * 2);
+  }
+  h3,
+  #guide {
+    font-size: calc(2vw * 1.5);
+  }
+  footer {
+    height: auto;
+  }
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+  }
+  .contact p {
+    font-size: 3vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  }
+  .container-follow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navLink {
+    font-size: 5vw;
+  }
+}

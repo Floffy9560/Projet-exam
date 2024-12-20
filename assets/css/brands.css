@@ -1,0 +1,45 @@
+/* ///////////////////////////////////////////////////brands.html////////////////////////////////////////////////////////// */
+
+/*---------------------------mise en place des conteneur de deux div sur une page -------------------------*/
+.container_brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 15vh;
+  gap: 5vh;
+}
+
+/*---------------------------------------taille de chaque div  -------------------------------*/
+.container_cards {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 5vh;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(48, 108, 96, 0.9);
+}
+/*--------------------------------------mise en place des photos -----------------------------*/
+.img {
+  display: flex;
+  width: 100%;
+  height: 25vh;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: fill;
+  border: 8px double #c89f36;
+}
+/*---------------------------------------mise en place du texte--------------------------------*/
+
+.speech {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  gap: 3vh;
+  padding: 4vh;
+}

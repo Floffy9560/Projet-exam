@@ -1,0 +1,39 @@
+.img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 5vh auto;
+  width: 70%;
+  height: 50vh;
+}
+#image {
+  object-fit: fill;
+  width: 100%;
+  min-width: 350px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 15px;
+}
+.container-contactLenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 5vh auto;
+  width: 50%;
+  min-width: 300px;
+  gap: 3vh;
+  padding: 5vh;
+  border: 3px solid #c89f36;
+  background-color: rgba(48, 108, 96, 0.9);
+}
+label {
+  font-size: 3vh;
+}
+select {
+  width: 60px;
+  height: 40px;
+}
+.button {
+  width: 100%;
+  max-width: 300px;
+  min-width: 150px;
+  height: 50px;
+}
