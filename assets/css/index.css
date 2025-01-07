@@ -1,33 +1,43 @@
 @font-face {
   font-family: "boecklins";
-  src: url(/assets/boecklins-universe/Boecklins\ Universe.ttf);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  src: url(../boecklins-universe/boecklins-universe.ttf);
 }
 
-/* ////////////////////////////////////////////////////index.html/////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// index.php /////////////////////////////////////////////////////////// */
 
-/* -------------------------------------section------------------------------------ */
+main {
+  width: 90%;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 20rem;
+  margin: 1rem auto;
+}
+h1 {
+  font-size: 6vw;
+  font-family: "boecklins";
+  color: #2c2c2c;
+  text-shadow: 4px 4px 4px black;
+}
+
+/*----------------------------------------*/
+/*----------------section-----------------*/
+/*----------------------------------------*/
 
 section {
   display: flex;
   flex-direction: column;
-  margin: auto;
   width: 100%;
-  margin-bottom: 15vh;
-}
-/* --------------------------sous section : brands and custome--------------------- */
-
-.container-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin-bottom: 5rem;
 }
 
-/* -----------------------------------practical guide------------------------------  */
+/*------------------------------------------------*/
+/*----------------practical guide-----------------*/
+/*------------------------------------------------*/
 
 .container_guide {
   display: flex;
@@ -38,14 +48,14 @@ section {
 }
 .guide_pict {
   display: flex;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
+  width: 300px;
   flex-direction: column;
   align-items: center;
   gap: 2vh;
 }
 .guide_img {
-  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.5);
   border: 3px solid #c89f36;
   border-radius: 15px;
   height: 30vh;
@@ -53,7 +63,10 @@ section {
   object-fit: fill;
 }
 
-/*-----------------------------practical guide : text under img ---------------------------*/
+/*-----------------------------------------------------------------*/
+/*----------------practical guide : text under img-----------------*/
+/*-----------------------------------------------------------------*/
+
 #guide {
   font-size: 2vw;
   font-weight: bold;
@@ -63,7 +76,9 @@ section {
   flex-grow: 1;
 }
 
-/* ---------------------------section offres du moment----------------------*/
+/*---------------------------------------------------------*/
+/*----------------section offres du moment-----------------*/
+/*---------------------------------------------------------*/
 
 .container-offre {
   width: 100%;
@@ -71,138 +86,146 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 10vh;
 }
 
-/*----------------------------main--offre lunettes------------------------*/
+/*-----------------------------------------------*/
+/*----------------offre lunettes-----------------*/
+/*-----------------------------------------------*/
 
 .offres {
   display: flex;
   width: 80%;
   max-width: 1000px;
-  min-width: 400px;
+  min-width: 250px;
 }
-#photo_offre {
+.photo_offre {
   width: 100%;
-  outline: 15px double #c89f36;
+  /*outline: 10px double #c89f36;*/
   border-radius: 15px;
+  box-shadow: 0 0 155px rgba(0, 0, 0, 1);
 }
 
-/*-------------------------Mise en place des deux div de la section 2 -------------------*/
+/*-----------------------------------------------------------------*/
+/*----------------sous section : brands and custom-----------------*/
+/*-----------------------------------------------------------------*/
+
+.container-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/*---------------------------------------------------------------------------*/
+/*----------------Mise en place des deux div de la section 2-----------------*/
+/*---------------------------------------------------------------------------*/
 
 .grid_container {
-  width: 50%;
   border-radius: 10px;
-  padding: 2vh;
-  min-width: 400px;
+  max-width: 500px;
+  min-width: 250px;
 }
 .brands {
-  display: flex;
-  width: 50%;
-  min-width: 400px;
-  min-height: 20vh;
+  text-align: center;
+  padding: 1rem;
+  width: 70%;
+  max-width: 500px;
+  min-width: 250px;
+  min-height: 15rem;
 }
 
-/*---------------------------Mise en place de la grid photos marques  -------------------*/
+/*------------------------------------------------------------------------*/
+/*----------------Mise en place de la grid photos marques-----------------*/
+/*------------------------------------------------------------------------*/
 
 .grid {
-  margin: auto;
   display: grid;
-  max-height: 65vh;
   grid-template-columns: 40% 10% 10% 40%;
   grid-template-rows: 30% 10% 20% 10% 30%;
+  background-color: rgba(172, 176, 175, 0.7);
 }
 
 .photos img {
   border-radius: 20px;
-  object-fit: fill;
-  width: 100%;
-  height: 100%;
-  flex-grow: 1;
   opacity: 0.8;
   transform: scale(1);
   transition: z-index 1s, transform 1s, opacity 8s;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-/*-------------------------------placement des photos dans la grid--------------------*/
+/*------------------------------------------------------------------*/
+/*----------------placement des photos dans la grid-----------------*/
+/*------------------------------------------------------------------*/
+
 #friendly_frenchy {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  width: auto;
-  height: auto;
 }
 #woodys {
   grid-column: 4 / 5;
   grid-row: 1 / 3;
-  width: auto;
-  height: auto;
 }
 #brique {
   grid-column: 1 / 3;
   grid-row: 2 / 4;
-  width: auto;
-  height: auto;
 }
 #sunday {
   grid-column: 3 / 5;
   grid-row: 3 / 5;
-  width: auto;
-  height: auto;
 }
 #ic_berlin {
   grid-column: 1 / 2;
-  grid-row: 4 / 6;
-  width: auto;
-  height: auto;
+  grid-row: 4 / 7;
 }
 #brett {
   grid-column: 2 / 5;
   grid-row: 5 / 7;
-  width: auto;
-  height: auto;
 }
 
-/*-------------------------Mise en place des deux div de la section 3 -------------------*/
+/*---------------------------------------------------------------------------*/
+/*----------------Mise en place des deux div de la section 3-----------------*/
+/*---------------------------------------------------------------------------*/
+
 .custom_made_text {
-  display: flex;
-  width: 50%;
-  min-width: 400px;
-  min-height: 20vh;
+  padding: 1rem;
+  width: 70%;
+  max-width: 500px;
+  min-width: 250px;
+  min-height: 15rem;
+  border: dashed transparent;
 }
 
 .custom_made_img {
   display: flex;
-  width: 50%;
-  min-width: 400px;
+  justify-content: center;
+  width: 48%;
+  min-width: 250px;
 }
-.custom_img {
-  margin: 5vh;
-}
+
 .custom_img img {
-  display: flex;
-  width: 100%;
-  box-shadow: 12px -10px 12px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 12px -10px 12px 0px rgba(0, 0, 0, 0.6);
   border-radius: 30px 15px 30px 15px;
 }
+/*-----------------------------------------------------------*/
+/*----------------decoration for a , h2 , p -----------------*/
+/*-----------------------------------------------------------*/
 
-/*-----------------------------------decoration for a  , h2 , p ---------------------------*/
-
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7rem;
+  margin-top: 1rem;
+}
 h2 a {
-  font-size: 7vw;
-}
-p {
-  font-size: 1.5vw;
   margin: auto;
+  font-size: 5vw;
+  color: #2c2c2c;
+  font-family: "Dancing Script";
 }
-a {
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  color: black;
-  font-size: 2vw;
-}
-
 h2 a:after {
   content: "";
   position: absolute;
@@ -211,9 +234,23 @@ h2 a:after {
   height: 5px;
   bottom: 0;
   left: 0;
-  background-color: black;
+  background-color: #2c2c2c;
   transform-origin: bottom right;
-  transition: transform 0.6s ease-out;
+  transition: transform 0.8s ease-out;
+}
+
+p {
+  font-size: 1.5vw;
+  text-align: center;
+  margin: auto;
+  color: #2c2c2c;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  color: #2c2c2c;
+  font-size: 2vw;
 }
 
 .navLink {
@@ -221,7 +258,10 @@ h2 a:after {
   font-family: "Dancing Script";
   color: #c89f36;
 }
-/*--------------------------------effets de styles-----------------------*/
+
+/*--------------------------------------------------*/
+/*----------------effets de styles -----------------*/
+/*--------------------------------------------------*/
 
 a:hover:after {
   transform: scaleX(1);
@@ -231,8 +271,9 @@ a:hover:after {
 .custom_made_text:hover {
   border-radius: 10px;
   border: dashed;
+  transition: all 0.6 ease-in-out;
   box-shadow: 12px -10px 12px 0px rgba(0, 0, 0, 0.4);
-  background-color: rgba(218, 218, 218, 0.8);
+  background-color: rgba(172, 176, 175, 0.7);
 }
 .photos img:hover,
 #guide:hover {
@@ -240,4 +281,36 @@ a:hover:after {
   transform: scale(1.2);
   transition: 3s;
   z-index: 100;
+}
+
+/*----------------------------------------------*/
+/*----------------media queries-----------------*/
+/*----------------------------------------------*/
+
+@media all and (max-width: 426px) {
+  h1 {
+    font-size: 15vw;
+    font-weight: normal;
+  }
+  a {
+    font-size: 5vw;
+  }
+
+  h2 a {
+    font-size: 9vw;
+  }
+  .navLink {
+    font-size: 5vw;
+  }
+  p {
+    font-size: 4vw;
+  }
+
+  .guide_img {
+    height: 15vh;
+    width: 250px;
+  }
+  #photo_offre {
+    height: 20vh;
+  }
 }

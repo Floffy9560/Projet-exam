@@ -1,36 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .formulaire {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1440 px;
+  gap: 1rem;
+  width: 100vw;
+  justify-content: center;
+  margin: 2rem auto;
 }
 .connection,
 .inscription {
-  display: flex;
   width: 100%;
   min-width: 300px;
-  max-width: 575px;
-  flex-direction: column;
-  margin-bottom: 5vh;
-  gap: 2vh;
+  max-width: 500px;
   border-radius: 15px;
-  padding: 1em;
+  padding: 1rem 1.5em;
+  margin-bottom: 1rem;
   background-color: rgba(48, 108, 96, 0.9);
 }
 
 .form_inscription,
 .form_connection {
   /* On centre le formulaire */
-  margin: 0 4vh 0 4vh;
+  margin: auto;
   padding: 1em;
   border-radius: 15px;
   background-color: #c89f36;
+  color: #0a0a0a;
+}
+.firstname {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+p {
+  color: #e8f1f0;
+}
+span {
+  font-weight: bold;
+  color: #c89f36;
+}
+.inputCivilityName {
+  width: 49%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border: 1px solid #120d03;
+  border-radius: 10px;
+  height: 50px; /* Taille uniforme pour des champs */
+}
+h2 {
+  color: #120d03;
+  margin-bottom: 1rem;
+  font-size: 30px;
 }
 .civility_container {
   /*On place les éléments en lignes*/
@@ -39,56 +60,68 @@
   align-items: center;
   width: 100%;
   max-width: 400px;
-  margin-bottom: 3vh;
+  margin-bottom: 1rem;
 }
 .civility_choice {
   display: flex;
   align-items: center;
-  gap: 1vw;
-  font-size: 1.5 vw;
 }
-.firstname {
-  display: flex;
-}
-ul {
-  list-style: none;
-}
+
 .input {
-  font-size: 1.5vw sans-serif;
-  width: 80%;
-  margin-bottom: 3vh;
-  height: 50px; /* Taille uniforme pour des champs */
+  display: flex;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
   border: 1px solid #120d03;
   border-radius: 10px;
+  height: 50px; /* Taille uniforme pour des champs */
 }
 #tel {
-  margin-top: 3vh;
+  height: 40px;
+  border: 1px solid #120d03;
+  border-radius: 10px;
+  padding-left: 1rem;
+  margin-top: 1rem;
 }
 select {
-  margin: 3vh 0;
+  margin: 1rem 1rem;
   border-radius: 5px;
   height: 35px;
   width: 100%;
   max-width: 100px;
 }
+
+/*---------------------------------------------------------------*/
 /* On rajoute une mise en avant pour les éléments avec le focus. */
+/*---------------------------------------------------------------*/
+
 input:focus,
 textarea:focus {
-  outline-color: 5px solid yellow;
+  outline-color: 5px solid;
 }
 
 textarea {
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 .button {
-  text-align: center;
-  margin-top: 2vh;
+  display: flex;
+  margin: auto;
+}
+.btnSubmit {
+  margin: 1rem auto;
   height: 50px;
   width: 100%;
+  height: 2rem;
+  width: 7rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #c89f36;
+  color: #120d03;
 }
 #password {
   text-decoration: none;
-  padding-left: 2em;
+  padding-left: 1rem;
   color: #120d03;
   opacity: 0.6;
 }
@@ -96,20 +129,18 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5vh;
-  gap: 2vh;
-  font-size: 1em;
-  justify-content: space-between;
+  margin: 1rem auto;
+  gap: 1rem;
+  font-size: 1rem;
+}
+.confirmation_container_div {
+  display: flex;
 }
 .confirmation {
-  height: 1em;
-  margin-right: 1vh;
+  height: 1rem;
+  margin-right: 0.5rem;
 }
 
 #tel {
-  width: 130px;
-}
-.submit {
-  background-color: #c89f36;
-  color: #120d03;
+  width: 10rem;
 }

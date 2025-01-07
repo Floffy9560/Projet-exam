@@ -1,14 +1,14 @@
 .img {
   display: flex;
   justify-content: center;
-  margin: 0 auto 5vh auto;
+  margin: 2rem auto;
   width: 70%;
   height: 50vh;
 }
 #image {
   object-fit: fill;
   width: 100%;
-  min-width: 350px;
+  min-width: 300px;
   border-radius: 15px;
   box-shadow: 10px 10px 15px;
 }
@@ -18,14 +18,15 @@
   align-items: center;
   margin: 0 auto 5vh auto;
   width: 50%;
-  min-width: 300px;
+  min-width: 250px;
   gap: 3vh;
-  padding: 5vh;
+  padding: 1rem;
   border: 3px solid #c89f36;
   background-color: rgba(48, 108, 96, 0.9);
+  box-shadow: 0 0 20px #c89f36;
 }
 label {
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 select {
   width: 60px;

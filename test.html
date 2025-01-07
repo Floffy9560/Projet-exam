@@ -1,13 +1,217 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <title>Menu Burger</title>
+    <link rel="stylesheet" href="/assets/css/frams.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        color: white;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .menu.open {
+        transform: translateX(0);
+      }
+
+      .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+      }
+
+      .menu ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .burger {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .burger div {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .burger.open div:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+      }
+
+      .burger.open div:nth-child(2) {
+        opacity: 0;
+      }
+
+      .burger.open div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      h1 {
+        margin-top: 150px;
+      }
+      .div1 {
+        width: 45%;
+        height: 600px;
+        /*background-color: #306c60;*/
+        background-color: #1f413d;
+      }
+      .div2 {
+        width: 45%;
+        height: 600px;
+        background-color: #306c60;
+      }
+      .div1 p,
+      .div2 p {
+        color: #c89f36;
+      }
+      .containerd1d2 {
+        display: flex;
+      }
+    </style>
   </head>
   <body>
-    <button type="submit">Clique moi</button>
-    <input type="button" value="Clisur moi cokin" />
-    <input type="submit" value="Clisur moi cokin" />
+    <div class="containerd1d2">
+      <div class="div1">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
+          quis blanditiis animi officia? Eveniet accusamus nesciunt veniam ex
+          laborum, cupiditate magni, numquam molestiae aliquam, nulla odio
+          delectus magnam excepturi beatae optio nostrum? Ipsam, necessitatibus
+          dignissimos similique neque omnis maiores, architecto ut repellat
+          harum, optio quis dolores ad eligendi cumque iure.
+        </p>
+      </div>
+      <div class="div2">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
+          quis blanditiis animi officia? Eveniet accusamus nesciunt veniam ex
+          laborum, cupiditate magni, numquam molestiae aliquam, nulla odio
+          delectus magnam excepturi beatae optio nostrum? Ipsam, necessitatibus
+          dignissimos similique neque omnis maiores, architecto ut repellat
+          harum, optio quis dolores ad eligendi cumque iure.
+        </p>
+      </div>
+    </div>
+    <div class="burger" id="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="agenda.php">Prendre rendez-vous</a></li>
+        <li><a href="shop.php">Le magasin</a></li>
+        <li><a href="frams.php">Lunettes</a></li>
+        <li><a href="contactLenses.php">lentilles</a></li>
+        <li><a href="glasses.php">Guide pratique</a></li>
+        <li><a href="glasses.php">Compte</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <h1>Catalogue de Lunettes</h1>
+    <div id="glasses-container"></div>
+    <script>
+      const burger = document.getElementById("burger");
+      const menu = document.getElementById("menu");
+      const overlay = document.getElementById("overlay");
+
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("open");
+        menu.classList.toggle("open");
+        overlay.classList.toggle("open");
+      });
+
+      overlay.addEventListener("click", () => {
+        burger.classList.remove("open");
+        menu.classList.remove("open");
+        overlay.classList.remove("open");
+      });
+
+      // Charger les données JSON
+      fetch("glasses.json")
+        .then((response) => response.json()) // Convertir la réponse en JSON
+        .then((glasses) => {
+          const container = document.getElementById("glasses-container");
+
+          // Parcourir et afficher chaque paire de lunettes
+          glasses.forEach((glass) => {
+            const glassCard = document.createElement("div");
+            /*glassCard.style.border = "1px solid #ccc";
+            glassCard.style.margin = "10px";
+            glassCard.style.padding = "10px";
+            glassCard.style.textAlign = "center";
+            glassCard.style.width = "200px";
+            glassCard.style.display = "inline-block";*/
+            glassCard.classList.add(`cards`);
+
+            glassCard.innerHTML = `
+        <img src="${glass.image}" alt="${glass.name}" style="width: 100%; height: 200px;">
+        <h3>${glass.name}</h3>
+        <p>Prix : ${glass.price}</p>
+        <p>Couleur : ${glass.color}</p>
+        <p>Matière : ${glass.matiere} </p>
+      `;
+
+            container.appendChild(glassCard);
+          });
+        })
+        .catch((error) =>
+          console.error("Erreur lors du chargement des données :", error)
+        );
+    </script>
   </body>
 </html>

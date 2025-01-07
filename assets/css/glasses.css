@@ -1,157 +1,152 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-.main {
+
+main {
+  width: 70%;
   text-align: center;
-  max-width: 1440px;
-  box-sizing: border-box;
-  background: #f0efef;
-  font-size: 2em;
-  margin: 20vh auto 20vh auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px;
+  background: rgba(172, 176, 175, 0.7);
+  padding: 1rem;
+  margin: 2rem auto;
 }
-header {
-  width: 100%;
+h2 {
+  font-size: 3vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  color: #1e3a5f;
 }
-
-/* ----------------------------container sidenav  logo contact search --------------------*/
-
-.container_header {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 20vh;
-  background-color: #77a8a8;
-  position: sticky;
+h3 {
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  color: #ab8007;
 }
-.container_logo {
-  width: 50%;
-  height: 50%;
-}
-.logo {
-  width: 40%;
-  height: 100%;
-}
-.logo_enseigne {
-  width: 100%;
-  height: 100%;
-}
-.petit_icones {
-  max-width: 25px;
-  max-height: auto;
-}
-.container_contact {
-  display: flex;
-  justify-content: flex-end;
-  width: 50%;
-  height: 50%;
-}
-.contact {
-  display: flex;
-  width: 80%;
-}
-.contact a {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #ffc196;
-}
-#calendar {
-  margin-right: 3px;
-}
-.sidenav {
-  display: flex;
-  width: 75%;
-  height: 50%;
-}
-.sidenav :nth-child(1) {
-  width: 35%;
-}
-.sidenav :nth-child(2) {
-  width: 35%;
-}
-.sidenav :nth-child(3) {
-  width: 50%;
-}
-.sidenav :nth-child(4) {
-  width: 50%;
-}
-.sidenav a {
-  display: flex;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  text-wrap: nowrap;
-  color: #ffc196;
-  font-size: 2em;
-  font-weight: bold;
-  font-family: "Dancing Script", cursive;
-  text-decoration: none;
-}
-.container_count {
-  display: flex;
-  align-items: center;
-  width: 25%;
-  height: 50%;
-}
-
-.count {
-  width: 20%;
-}
-.basket {
-  width: 20%;
-}
-.count_icon {
-  max-width: 30px;
-}
-.search {
-  width: 100%;
-  margin-right: 5vh;
-}
-.form-example {
-  display: flex;
-}
-#site-search {
-  background-color: #77a8a8;
-  border: 1px solid;
-}
-button {
-  width: 20%;
-  background-color: #77a8a8;
-  border: 0.5px solid;
-}
-.burger {
-  width: 10%;
-}
-
-#iconBurger {
-  display: none;
-  margin-top: 4vh;
-  float: right;
-  background-color: white;
-  border: 1px solid;
-  width: 8vh;
-  height: 7vh;
-  background-color: black;
-}
-#iconBurger span {
-  display: block;
-  height: 1vh;
-  width: 6vh;
-  margin: 1vh;
-  background-color: black;
-}
-/*------------------------------------------main--------------------------------------*/
-
-h2,
-h3,
 h4 {
-  margin: 5vh auto 5vh auto;
+  font-size: 1.5vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  text-decoration: underline;
+  color: #1e3a5f;
 }
-p {
-  margin-bottom: 5vh;
+main p {
+  width: 80%;
+  margin: 2vw auto;
+  text-align: center;
+  font-size: 1.5vw;
+  color: #333333;
+}
+li {
+  list-style: none;
+  padding-left: 1.6vw;
+  background-image: url("../img/icons8-lunettes-de-soleil-16.png");
+  background-position: 0 0;
+  background-size: 1.5vw 1.5vw;
+  background-repeat: no-repeat;
+  font-size: 1.5vw;
+  color: #333333;
+}
+.DMLA {
+  width: 70%;
+  font-size: 1.2vw;
+  margin: auto;
+  margin-top: 4vh;
+  color: whitesmoke;
+  background: #ab8007;
+}
+ul,
+ol {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #1e3a5f;
+}
+.prescriptionImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.prescriptionImg img {
+  width: 100%;
+  max-width: 40rem;
+  min-width: 5rem;
+}
+
+/*---------------------------------*/
+/*---------side nav burger---------*/
+/*---------------------------------*/
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: fixed;
+  padding: 1rem;
+  border-radius: 10px;
+  left: 50%;
+  top: 200px;
+  background: rgba(172, 176, 175, 0.9);
+  transform: translateX(-500%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 555;
+}
+.sideNav.open {
+  transform: translateX(-50%);
+}
+.searchOnPage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 250px;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+h5 a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+h6 a {
+  font-size: 1rem;
+}
+
+.book {
+  position: fixed;
+  top: 50%;
+  left: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+.bi-arrow-bar-up {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+.bi {
+  font-size: 3rem;
 }

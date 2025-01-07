@@ -1,20 +1,22 @@
 @font-face {
   font-family: "boecklins";
-  src: url(/assets/boecklins-universe/Boecklins\ Universe.ttf);
+  src: url(assets/boecklins-universe/boecklins-universe.ttf);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Domine", serif;
 }
-html {
-  width: 100%;
-
-  font-size: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
   position: relative;
 }
-html:before {
+body:before {
   content: "";
   position: absolute;
   z-index: -5;
@@ -22,100 +24,57 @@ html:before {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.7;
-  background-image: url(/assets/img/photo\ papier\ peint.jpg);
-  background-size: fill;
+  opacity: 0.5;
+  background-image: url(../img/papierPNG.png);
+  background-size: cover;
   background-repeat: no-repeat;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 20vh;
-}
-main {
-  width: 80%;
-  padding-top: 5vh;
-}
+
 header {
   width: 100%;
   display: flex;
   align-items: center;
 }
-.name {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-}
 
 .navLink {
-  width: 100%;
+  display: flex;
+  justify-content: space-around;
   text-decoration: none;
   color: #c89f36;
   font-size: 2vw;
   font-family: "Dancing Script";
   font-weight: bold;
 }
-.footerLink {
-  text-decoration: none;
-  color: #c89f36;
-  font-size: 1.5vw;
-}
-h1 {
-  margin: auto;
-  font-size: 7vw;
-  font-family: "boecklins";
-  color: #2c2c2c;
-  text-shadow: 4px 4px 4px black;
-}
-h2 {
-  display: flex;
-  justify-content: center;
-  font-family: "Dancing Script";
-  font-size: 7vw;
-  margin-top: 10vh;
-  margin-bottom: 20vh;
-  text-shadow: 10px 10px 20px;
-  color: #1e1e1e;
-}
-h3 {
-  text-align: center;
-  text-shadow: 0px 0px 20px;
-  font-size: 2vw;
-  color: #1e1e1e;
-}
+
 a {
   color: black;
 }
-span {
-  font-size: 2vw;
-}
-
-/* -------------------------container logo sidenav search----------------------*/
+/*-----------------------------------------------------------------------------*/
+/* -------------------------container logo-sidenav-search----------------------*/
+/*-----------------------------------------------------------------------------*/
 
 .menuContainer {
   width: 100%;
-  height: 20vh;
+  height: 6rem;
   display: flex;
+  justify-content: space-between;
   flex-wrap: nowrap;
-  background-color: rgba(48, 108, 96, 0.9);
-  position: fixed;
-  top: 0;
-  z-index: 999;
+  /*background-color: rgba(31, 65, 61, 1);*/
+  /*background: rgb(48, 108, 96);*/
+  background: linear-gradient(
+    90deg,
+    rgba(48, 108, 96, 1) 5%,
+    rgba(31, 65, 61, 1) 12%
+  );
   box-shadow: 0px 5px 10px #306c60;
+  z-index: 600;
 }
-
-.burgerMenu {
+.smartphone-header {
   display: none;
 }
-#containerLogo {
-  display: flex;
-  height: 100%;
-}
+
 #logo {
-  width: 100%;
-  height: 100%;
+  height: 7rem;
 }
 .containerMenu {
   width: 90%;
@@ -123,204 +82,231 @@ span {
 }
 .menu {
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .spans {
   width: 70%;
   display: flex;
-  gap: 1vh;
+  gap: 1rem;
+  justify-content: space-around;
   align-items: center;
-  text-align: center;
   color: #c89f36;
   text-shadow: 0px 0px 10px black;
+}
+.searchAccount {
+  width: 40%;
+  padding: 1rem;
 }
 .searchContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 25%;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
 }
-button {
-  width: 20%;
-  height: 80%;
-  border-radius: 10px;
-  border: 3px solid;
-  background: #306c60;
+.searchContainerLogo {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.searchButton {
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 15px;
+}
+.searchContainerBtn {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 #site-search {
-  width: 70%;
-  height: 80%;
+  width: 100%;
+  height: 50px;
   border-radius: 10px;
   border: 3px solid;
-  color: black;
+  padding-left: 1rem;
 }
 #site-search:focus {
   outline: none;
 }
+
 .account {
-  width: 25%;
+  width: 100%;
+  height: 50%;
+  gap: 2rem;
   display: flex;
-  gap: 5vh;
+  align-items: center;
   justify-content: center;
   align-items: center;
 }
-.account img {
-  height: 50px;
+.logoNav {
+  height: 40px;
 }
 
-/*--------------------------------------------container-footer----------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------container-footer--------------------------------*/
+/*-----------------------------------------------------------------------------*/
+
 footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 20vh;
+  z-index: 55;
 }
+
 .container-footer {
   width: 100%;
   display: flex;
   align-items: center;
+  gap: 1rem;
   justify-content: space-between;
-  gap: 5vh;
-  padding-bottom: 2vh;
-  background-color: #306c60;
+  background-color: rgba(31, 65, 61, 1);
+  padding: 1rem;
 }
 .contact {
   text-align: center;
-  width: 100%;
 }
 .contact p {
   font-size: 1.5vw;
+  color: #c89f36;
 }
 
 .links-footer {
-  width: 100%;
-  height: 100%;
-  gap: 4vw;
+  gap: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .container-follow {
-  width: 80%;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 .follow {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 .logoFollow {
-  height: 50px;
+  height: 40px;
 }
 .copyright {
-  text-align: center;
-  border-top: 10px double #306c60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
-#copyrightLogo {
-  height: 25px;
+.copyrightLogo {
+  height: 2vw;
 }
-
-/*----------------------------media queries smartphone --------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*------------------------------------media queries smartphone ------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
 
 @media all and (max-width: 769px) {
+  /*-------------------------------------------------*/
+  /*---------retirer le menu pour laptop-------------*/
+  /*-------------------------------------------------*/
   .menuContainer {
     display: none;
   }
-  .burgerMenu {
-    display: flex;
-    flex-direction: column;
+
+  /*-----------------------------------------------------*/
+  /*---------insérer le menu pour smartphone-------------*/
+  /*-----------------------------------------------------*/
+
+  .smartphone-header {
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    align-items: center;
+    display: block;
   }
-  .smartphoneHeader {
-    width: 100%;
-    height: 20vh;
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #306c60;
-  }
-  #containerLogo {
-    display: flex;
-    width: 25%;
-    height: 80%;
-  }
-  #logo {
-    display: flex;
-    align-items: center;
-  }
-
-  .account {
-    display: flex;
-    width: 30%;
-    height: 100%;
-  }
-  #toggle {
-    display: none;
+    width: 100%;
+    padding: 0px 0.5rem 0px 0.5rem;
+    /*background-color: #1f413d;*/
+    background: rgb(48, 108, 96);
+    background: linear-gradient(
+      90deg,
+      rgba(48, 108, 96, 1) 20%,
+      rgba(31, 65, 61, 1) 35%
+    );
   }
 
-  #label {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 80px;
+  .bi-list {
+    font-size: 60px;
+    position: fixed;
+    top: 20px;
+    color: #c89f36;
+    background-color: #1f413d;
+    z-index: 50;
+  }
+  .bi-basket3-fill {
+    font-size: 45px;
     color: #c89f36;
   }
-  nav {
-    width: 100%;
+  .headerDiv {
     display: flex;
-  }
-  .main_pages {
-    display: none;
-    width: 100%;
-    height: 80vh;
-    justify-content: space-around;
-    z-index: 55;
-    background-color: #306c60;
-  }
-  .main_pages a {
-    display: flex;
-    font-size: 3em;
     justify-content: center;
-    height: 18%;
+    align-items: center;
+    width: 96px;
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 250px;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    transform: translateY(-150%);
+    transition: all 0.6s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    background-color: #1f413d;
+  }
+  .burger-menu.open {
+    transform: translateY(0);
+  }
+  .burger-menu a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #c89f36;
   }
 
-  #toggle:checked + .main_pages {
-    display: block;
+  .navLink {
+    font-size: 3vw;
   }
-  h1,
-  h2 {
-    font-size: calc(7vw * 2);
-  }
-  h3,
-  #guide {
-    font-size: calc(2vw * 1.5);
-  }
-  footer {
-    height: auto;
-  }
+
+  /*-----------------------------------------------------*/
+  /*------------------footer smartphone------------------*/
+  /*-----------------------------------------------------*/
+
   .container-footer {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     text-align: center;
   }
   .contact p {
-    font-size: 3vw;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
+    font-size: 2vw;
   }
+
   .container-follow {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  .navLink {
-    font-size: 5vw;
+  .copyrightLogo {
+    height: 3vw;
   }
 }

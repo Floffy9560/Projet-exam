@@ -4,18 +4,20 @@
 .container_brands {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 3rem;
   justify-content: space-around;
-  width: 100%;
-  margin-bottom: 15vh;
-  gap: 5vh;
+  width: 80%;
+  gap: 2rem;
 }
 
 /*---------------------------------------taille de chaque div  -------------------------------*/
 .container_cards {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  gap: 5vh;
+  width: 45%;
+  min-width: 300px;
+  gap: 2rem;
   align-items: center;
   border-radius: 10px;
   background-color: rgba(48, 108, 96, 0.9);
