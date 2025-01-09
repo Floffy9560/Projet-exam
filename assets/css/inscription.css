@@ -53,6 +53,9 @@ h2 {
   margin-bottom: 1rem;
   font-size: 30px;
 }
+h5 {
+  font-size: 20px;
+}
 .civility_container {
   /*On place les éléments en lignes*/
   display: flex;
@@ -66,7 +69,16 @@ h2 {
   display: flex;
   align-items: center;
 }
-
+.containerIdentity {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+#labelLastname,
+#labelFirstname {
+  position: relative;
+  top: -30px;
+}
 .input {
   display: flex;
   font-size: 1rem;
@@ -90,6 +102,16 @@ select {
   height: 35px;
   width: 100%;
   max-width: 100px;
+}
+.label-passwors-custome {
+  position: relative;
+  background-color: red;
+}
+.bi-eye-slash-fill,
+.bi-eye-fill {
+  position: absolute;
+  right: 15px;
+  top: 18px;
 }
 
 /*---------------------------------------------------------------*/
@@ -119,7 +141,7 @@ textarea {
   background-color: #c89f36;
   color: #120d03;
 }
-#password {
+#passwordLost {
   text-decoration: none;
   padding-left: 1rem;
   color: #120d03;

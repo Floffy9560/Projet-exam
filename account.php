@@ -18,45 +18,96 @@
 <body>
     <?php include('header.php') ?>
     <main>
-        <div class="containerIdentity">
-            <div class="identity">
-                <div class="nameAccount">
-                    <div class="divName">
-                        <label for="firstname">Nom</label>
-                        <input type="text" id="firstname" class="name" name="firstname" required minlength="4" size="10" />
+        <section>
+            <div class="containerIdentity">
+                <h3>Identitée</h3>
+                <div class="identity">
+                    <div class="nameAccount">
+                        <div class="divName">
+                            <label for="accountLastname" id="labelLastname">Nom</label>
+                            <div class='accountIdentity' id="accountLastname"></div>
+
+                        </div>
+                        <div class="divName">
+                            <label for="accountFirstname" id="labelFirstname">Prénom</label>
+                            <div class='accountIdentity' id="accountFirstname"></div>
+
+                        </div>
                     </div>
-                    <div class="divName">
-                        <label for="lastname">Prénom</label>
-                        <input type="text" id="lastname" class="name" name="lastname" required minlength="4" size="10" />
+                    <label for="accountAdress">Adresse</label>
+                    <div class='accountIdentity' id="accountAdress"></div>
+
+                    <label for="accountEmail">Mail</label>
+                    <div class='accountIdentity' id="accountEmail"></div>
+
+                    <label for="accountTel">Numéro de téléphone</label>
+                    <div class='accountIdentity' id="accountTel"></div>
+
+                    <label for="accountPassword">Mot de passe</label>
+                    <div class='accountIdentity' id="accountPassword"></div>
+                </div>
+            </div>
+            <div class="crush">
+                <h3>Coup de coeur</h3>
+
+                <div class="framsChoice" id="framsChoice">
+
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <h2>Vos commandes :</h2>
+
+        <section>
+
+            <div class="containerOrder">
+
+                <h4><u>Commandes en cour :</u></h4>
+
+                <div class="order">
+                    <div>
+                        <p>nom de la commande</p>
+                    </div>
+                    <div class="container-img-followOrder">
+                        <div class="imgOrder">
+                            <img src="assets/img/affiche-lunettes1.webp" alt="img de la commande">
+                        </div>
+                        <a href="">Suivie de ma commande</a>
                     </div>
                 </div>
-                <label for="address">Adresse</label>
-                <input type="text" id="address" class="inputAccount" name="address" required minlength="4" size="10" />
-                <label for="mail">Mail</label>
-                <input type="tel" id="mail" class="inputAccount" name="mail" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" size="10" />
-                <label for="phone">Numéro de téléphone</label>
-                <input type="text" id="phone" class="inputAccount" name="phone" required minlength="10" size="10" />
-                <label for="password">Mot de passe</label>
-                <input type="text" id="password" class="inputAccount" name="password" required minlength="5" maxlength="12" size="10" />
-            </div>
-            <div class="glassesChoice" id="glassesChoice">
-                <h3>Coup de coeur</h3>
-                <i class="bi bi-arrow-left-square-fill"></i>
-                <div class="cards"></div>
-                <i class="bi bi-arrow-right-square-fill"></i>
-            </div>
-        </div>
 
-        <div class="containerOrderInProgress ">
-            <h3>Vos commandes</h3>
-            <div class="orderInProgress"></div>
-        </div>
-        <div class="containerOrderPlaced">
-            <h3>Vos commandes déja livrées</h3>
-            <div class="orderPlaced"></div>
-        </div>
 
+            </div>
+
+
+            <div class="containerOrder">
+                <h4><u>Vos commandes déja livrées :</u></h4>
+
+
+                <div class="order">
+                    <div>
+                        <p>nom de la commande</p>
+                    </div>
+                    <div class="container-img-followOrder">
+                        <div class="imgOrder">
+                            <img src="assets/img/affiche-lunettes1.webp" alt="img de la commande">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="orderPlaced">
+
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="assets/JS/account.js"></script>
 </body>
 <?php include('footer.php') ?>
 

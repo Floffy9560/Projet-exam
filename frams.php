@@ -115,7 +115,7 @@
         </div>
 
     </main>
-    <script src="assets/JS/script.js"></script>
+    <script src="assets/JS/frams.js" defer></script>
 </body>
 <?php include('footer.php') ?>
 

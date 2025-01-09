@@ -25,7 +25,7 @@
 
             <div class="containerOffersImage">
 
-                <img src="assets/img/offre-TT-Classique.jpg" alt="offre du moment" class="offersImage img1">
+                <a href="mutuelles.php"><img src="assets/img/offre-TT-Classique.jpg" alt="offre du moment" class="offersImage img1"></a>
 
             </div>
 
@@ -35,13 +35,25 @@
             <h2>Le 100% santée</h2>
 
             <div class="containerOffersImage">
-
                 <img src="assets/img/cmu.png" alt="100% santée" class="offersImage img2">
+            </div>
+            <a href="mutuelles.php" class="linkSantée">Se renseigner</a>
+
+        </div>
+        <div class="offers">
+
+            <h2>Les mutuelles</h2>
+
+            <div class="containerOffersImage">
+
+                <a href="mutuelles.php" class="linkMutuelle">
+                    <p class="offersP">Pour plus de facilitées le 1/3 payant est mit à votre disposition
+                        (plus amples renseignements en magasin)</p>
+                </a>
 
             </div>
         </div>
     </div>
-    <p>Pour plus de facilitées le 1/3 payant est mit à votre disposition (plus amples renseignements en magasin)</p>
 
     <?php include('footer.php') ?>
 </body>

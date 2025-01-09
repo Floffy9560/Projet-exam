@@ -40,20 +40,14 @@ fetch("glasses.json")
         <p>Prix : ${glass.price} </p>
         <p>Couleur : ${glass.color}</p>
         <p>Matière : ${glass.matiere} </p>
-        <i class="bi bi-heart-fill" id="bi-heart-fill"></i>
+        <i class="bi bi-heart-fill"></i>
       `;
 
       container.appendChild(glassCard);
-
-      const heart = document.getElementById("bi-heart-fill");
-
-      heart.addEventListener("click", () => {
-        heart.style.color = "red";
-      });
-
-      console.log(heart);
     });
+    heartChoice();
   })
+
   .catch((error) =>
     console.error("Erreur lors du chargement des données :", error)
   );
@@ -89,3 +83,12 @@ document.addEventListener("click", (event) => {
     document.getElementById("glassesChoice").appendChild(newDiv);
   }
 });*/
+function heartChoice() {
+  let hearts = document.querySelectorAll(".bi-heart-fill");
+
+  hearts.forEach((heart) => {
+    heart.addEventListener("click", () => {
+      heart.style.color = heart.style.color === "red" ? "black" : "red"; // Toggle la couleur entre rouge et noir
+    });
+  });
+}

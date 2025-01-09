@@ -34,23 +34,26 @@
   </head>
 
   <body>
-    <form action="">
-      <label for="tel">Votre numéro de tèl :</label>
-      <input
-        type="tel"
-        pattern="^(?:\+33|0)(?:\s|-|\.)?[1-9](?:\s|-|\.|\d){8}$"
-        minlength="10"
-        required
-      />
-      <label for="email">Votre email :</label>
-      <input
-        type="email"
-        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-        minlength="2"
-        title="Veuillez renseigner un email valide"
-      />
-      <button type="submit">Envoyer</button>
-    </form>
+    <div class="identity">
+      <div class="nameAccount">
+          <div class="divName">
+              <label for="accountLastname" id="labelLastname">Nom</label>
+              <input type="text" class='accountIdentity' id="accountLastname">dfgfg</input>
+          </div>
+          <div class="divName">
+              <label for="accountFirstname" id="labelFirstname">Prénom</label>
+              <input type="text" class='accountIdentity' id="accountFirstname">
+          </div>
+      </div>
+      <label for="accountAdress">Adresse</label>
+      <input type="text" class='accountIdentity' id="accountAdress" readonly></input>
+      <label for="accountEmail">Mail</label>
+      <input type="email" class='accountIdentity' id="accountEmail" readonly></input>
+      <label for="accountTel">Numéro de téléphone</label>
+      <input type="tel" class='accountIdentity' id="accountTel" readonly></input>
+      <label for="accountPassword">Mot de passe</label>
+      <input type="password" class='accountIdentity' id="accountPassword" readonly></input>
+  </div>
     <script>
       let tel = document.querySelector("form input");
       let btn = document.querySelector("button");

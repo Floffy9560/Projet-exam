@@ -14,9 +14,10 @@
   <link rel="stylesheet" href="assets/css/headerFooter.css" />
   <link rel="stylesheet" href="assets/css/inscription.css" />
 </head>
-<?php include('header.php') ?>
+
 
 <body>
+  <?php include('header.php') ?>
   <!-- ------------------------------------------------------>
   <!--------------- formulaire d'inscription----------------->
   <!-- ------------------------------------------------------>
@@ -30,29 +31,35 @@
         <!-- ------------------ Si client : proposer de rentré ses identifiant------------------------>
         <!-- ----------------------------------------------------------------------------------------->
 
-        <form action="account.php" method="post">
+        <form method="post">
           <div class="form_connection">
-
+            <label for="currentMail" id="label-customer-mail"></label>
             <input
-              type="text"
-              id="name"
-              name="mail_adress"
+              type="email"
+              id="currentMail"
+              name="currentMail"
               placeholder="Adresse mail"
-              class="input" />
-
-            <input
-              type="text"
-              id="name"
-              name="password"
-              placeholder="Mot de passe"
               class="input" required />
+
+            <div class="label-passwors-custome">
+              <label for="currentPasswordCustomer" id="r"></label>
+              <input
+                type="current-password"
+                id="currentPasswordCustomer"
+                name="currentPassword"
+                placeholder="Mot de passe"
+                class="input"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[&-+!*$@%_])([&-+!*$@%_\w]{8,15})$" required />
+              <i class='bi bi-eye-slash-fill' id="closeEye"></i>
+              <i class="bi bi-eye-fill" id="eye"></i>
+            </div>
 
           </div>
 
-          <a href="#" id="password">Mot de passe oublié?</a>
+          <a href="#" id="passwordLost">Mot de passe oublié?</a>
 
           <div class="button">
-            <button type="submit" class="btnSubmit">Se connecter</button>
+            <button type="submit" class="btnSubmit" id="SubmitCustomer">Se connecter</button>
           </div>
       </div>
       </form>
@@ -61,17 +68,19 @@
         <!-- --------------------------------------------------------------------------------------->
         <!-- -------------------- Si pas client proposer une inscription---------------------------->
         <!-- --------------------------------------------------------------------------------------->
-        <form action="" method="post">
+        <form action="account.php" method="post">
           <div class="form_inscription">
 
             <div class="civility_container">
-              <label for="civility">Civilité :</label>
+
+              <h5>Civilité :</h5>
               <div class="civility_choice">
                 <input
                   type="radio"
                   name="civility"
                   value="Mme"
-                  class="civility" required />Mme
+                  class="civility" id="civilityMme" required />
+                <label for="civility">Mme</label>
 
               </div>
               <div class="civility_choice">
@@ -79,54 +88,72 @@
                   type="radio"
                   name="civility"
                   value="Mr"
-                  class="civility" required />Mr
+                  class="civility" id="civilityMr" required />
+                <label for="civility">Mr</label>
               </div>
               <div class="civility_choice">
                 <input
                   type="radio"
                   name="civility"
                   id="other"
-                  class="civility" required />Autre
+                  class="civility" id="civilityOther" required />
+                <label for="civility">Autre</label>
               </div>
             </div>
 
-            <div class="firstname">
-              <label for="lastname"></label>
+            <div class="containerIdentity">
+
+              <label for="lastname" id='labelLastname'></label>
               <input
                 type="text"
                 name="lastname"
                 placeholder="Nom"
                 class="inputCivilityName"
-                pattern="[A-Za-z]{3,}" minlength="2" title="Le nom ne peut contenir que des lettres" required />
-              <label for="firstname"></label>
+                id="lastname"
+                pattern="[A-Za-z]{3,}" minlength="2" required />
+
+              <label for="firstname" id='labelFirstname'></label>
               <input
                 type="text"
                 name="firstname"
                 placeholder="Prénom"
-                class="inputCivilityName" pattern="[A-Za-z]{3,}" minlength="2" title="Le nom ne peut contenir que des lettres" required />
+                class="inputCivilityName"
+                id="firstname"
+                pattern="[A-Za-z]{3,}" minlength="2" required />
             </div>
-            <label for="email"></label>
+
+            <label for="email" id="labelEmail"></label>
             <input
               type="email"
               name="email"
               placeholder="Adresse mail"
-              class="input" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              class="input"
+              id="email"
+              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
               minlength="2" title="Veuillez renseigner un email valide" required />
 
+            <label for="adressT" id="adress"></label>
             <textarea
               name="postal_adress"
               placeholder="Adresse postale"
               class="input"
+              id="adressT"
               required></textarea>
 
-            <input
-              type="text"
-              name="password"
-              placeholder="Mot de passe"
-              class="input" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[&-+!*$@%_])([&-+!*$@%_\w]{8,15})$" required />
+            <div class="label-passwors-custome">
+              <label for="currentPassword" id="labelPassword"></label>
+              <input
+                type="password"
+                name="currentPassword"
+                placeholder="Mot de passe"
+                class="input"
+                id="currentPassword"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[&-+!*$@%_])([&-+!*$@%_\w]{8,15})$" required />
+              <i class='bi bi-eye-slash-fill' id="closeEye"></i>
+              <i class="bi bi-eye-fill" id="eye"></i>
+            </div>
+
             <div>
-              <label for="birthday">Date de naissance :</label><br>
-              <input type="date" id="start" name="trip-start" value="2025-01-01" min="1925-01-01" max="2025-12-31" />
               <select name="days" id="days" required>
                 <option value="">Jours</option>
                 <option value="1">1</option>
@@ -282,12 +309,12 @@
                 <option value="2025">2025</option>
               </select>
             </div>
-            <label for="phone_numbers">À quel numéro de téléphone le transporteur peut-il vous
+            <label for="tel" id='labelTel'>À quel numéro de téléphone le transporteur peut-il vous
               contacter ?</label>
             <input
               type="tel"
               id="tel"
-              name="phone_numbers"
+              name="tel"
               placeholder="N° de téléphone"
               class="inputTel"
               pattern="^(?:\+33|0)(?:\s|-|\.)?[1-9](?:\s|-|\.|\d){8}$"
@@ -353,14 +380,14 @@
             politique de confidentialité.
           </p>
           <div class="button">
-            <button type="submit" class="btnSubmit">S'inscrire</button>
+            <button type="submit" class="btnSubmit" id="submitNewCustomer">S'inscrire</button>
           </div>
         </form>
       </div>
     </div>
   </main>
   <?php include('footer.php') ?>
-  <script src="assets/JS/inscription.js"></script>
+  <script src="assets/JS/inscription.js" defer></script>
 </body>
 
 </html>
