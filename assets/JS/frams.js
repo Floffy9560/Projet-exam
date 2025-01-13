@@ -17,9 +17,9 @@ overlay.addEventListener("click", () => {
   menuSearch.classList.remove("open");
   overlay.classList.remove("open");
 });
-//-------------------------
-// Charger les données JSON
-//-------------------------
+//-----------------------------------------------------
+//           Charger les données JSON
+//-----------------------------------------------------
 
 fetch("glasses.json")
   .then((response) => response.json()) // Convertir la réponse en JSON
@@ -41,6 +41,7 @@ fetch("glasses.json")
         <p>Couleur : ${glass.color}</p>
         <p>Matière : ${glass.matiere} </p>
         <i class="bi bi-heart-fill"></i>
+        <button class="buttonPushKart">Ajouté au panier</button>
       `;
 
       container.appendChild(glassCard);
@@ -52,43 +53,53 @@ fetch("glasses.json")
     console.error("Erreur lors du chargement des données :", error)
   );
 
-/*const heart = document.querySelectorAll(".cards");
+//-----------------------------------------------------
+// Fonction creer par chat GPT + moi ^^ qui fonctionne qu'à moitié ^^
+//-----------------------------------------------------
 
-document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("bi-heart-fill")) {
-    console.log("Icône cœur cliquée !");
-    event.target.classList.toggle("active"); // Exemple de comportement
-  }
-});*/
+function keepHeart() {
+  let cards = document.querySelectorAll(".cards");
+  let heart = document.querySelector(".bi-heart-fill");
 
-/*document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("bi-heart-fill")) {
-    StylePropertyMap.color = "red";
-    document.getElementById("bi-heart-fill").addEventListener("click", () => {
-      // Redirige vers page2.html avec un paramètre
-      window.location.href = "kart.php?createDiv=true";
-    });
-  }
-  // Extraire les paramètres de l'URL
-  const params = new URLSearchParams(window.location.search);
-  const createDiv = params.get("createDiv");
+  cards.forEach((card, index) => {
+    let currentCard = cards[index].outerHTML;
+    console.log(`current cards = ${currentCard}`);
+    let currentJSON = JSON.parse(currentCard);
+    console.log(currentJSON);
+    localStorage.setItem("cards", JSON.parse(currentCard));
+    alert(localStorage);
+  });
+}
 
-  if (createDiv === "true") {
-    // Crée une nouvelle div
-    const newDiv = document.createElement("div");
-    newDiv.className = "new-div";
-    newDiv.textContent = "Ceci est une div créée via l'URL !";
+// code a effectuer
+// recuperer la liste des 'card' recuperer dans le json
+// recuperer le logo coeur de chaque 'card'et ajouter un evenement 'click'
+// l'evenement change la couleur du coeur de noir en rouge et vice versa plus enregister la 'card' dans le localstorage
+// inserer dans le json la 'card' selectionnée grace au coeur rouge ('heart')
+// Fonction pour afficher les cartes sauvegardées
 
-    // Ajoute la div au contenu principal
-    document.getElementById("glassesChoice").appendChild(newDiv);
-  }
-});*/
 function heartChoice() {
+  let cards = document.querySelectorAll(".cards");
   let hearts = document.querySelectorAll(".bi-heart-fill");
 
-  hearts.forEach((heart) => {
+  hearts.forEach((heart, index) => {
     heart.addEventListener("click", () => {
-      heart.style.color = heart.style.color === "red" ? "black" : "red"; // Toggle la couleur entre rouge et noir
+      heart.style.color = heart.style.color === "red" ? "black" : "red"; // Basculer la couleur du cœur
+
+      let tableau = JSON.parse(localStorage.getItem("cards")) || [];
+
+      let currentCard = cards[index].outerHTML; // Récupérer le contenu de la carte associée
+
+      if (heart.style.color === "red") {
+        !tableau.includes(currentCard);
+        tableau.push(currentCard);
+      } else {
+        // Retirer la carte du tableau si elle est désélectionnée
+        tableau = tableau.filter((card) => card !== currentCard);
+      }
+
+      localStorage.setItem("cards", JSON.stringify(tableau));
+      console.log(tableau);
     });
   });
 }

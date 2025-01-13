@@ -24,33 +24,46 @@
         <table>
           <tr>
             <th>lundi</th>
-            <td>10h00-12h30</td>
-            <td>14h30-19h00</td>
+
+            <td colspan="2">
+              <span>10h00-12h30</span>
+              <span> 14h30-19h00</span>
+            </td>
           </tr>
           <tr>
             <th>mardi</th>
-            <td>10h00-12h30</td>
-            <td>14h30-19h00</td>
+            <td colspan="2">
+              <span>10h00-12h30</span>
+              <span> 14h30-19h00</span>
+            </td>
           </tr>
           <tr>
             <th>mercredi</th>
-            <td>10h00-12h30</td>
-            <td>14h30-19h00</td>
+            <td colspan="2">
+              <span>10h00-12h30</span>
+              <span> 14h30-19h00</span>
+            </td>
           </tr>
           <tr>
             <th>jeudi</th>
-            <td>10h00-12h30</td>
-            <td>14h30-19h00</td>
+            <td colspan="2">
+              <span>10h00-12h30</span>
+              <span> 14h30-19h00</span>
+            </td>
           </tr>
           <tr>
             <th>vendredi</th>
-            <td>10h00-12h30</td>
-            <td>14h30-19h00</td>
+            <td colspan="2">
+              <span>10h00-12h30</span>
+              <span> 14h30-19h00</span>
+            </td>
           </tr>
           <tr>
             <th>samedi</th>
-            <td>10h00-12h30</td>
-            <td>14h30-19h00</td>
+            <td colspan="2">
+              <span>10h00-12h30</span>
+              <span> 14h30-19h00</span>
+            </td>
           </tr>
         </table>
         <button><a href="agenda.php">Prendre rendez-vous</a></button>

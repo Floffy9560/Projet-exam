@@ -52,11 +52,6 @@
 
                 <div class="framsChoice" id="framsChoice">
 
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-
                 </div>
             </div>
         </section>

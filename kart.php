@@ -17,7 +17,63 @@
 
 <body>
     <?php include('header.php') ?>
+    <main>
+        <h1>Votre panier</h1>
+        <div class="contenairKart">
+
+            <div class="head">
+                <p class="secondColumn">Produits</p>
+                <p class="thirdColumn">Prix</p>
+            </div>
+
+            <div class="bodyKart">
+                <div class="secondColumn produits">
+                    <img src="assets/img/affiche-lunettes2.webp" alt="img article" class="img">
+                    <div class="article">
+                        <span>description de l'article</span>
+                        <div class="choiceQuantity">
+                            <button class="less">-</button>
+                            <p class="quantity">1</p>
+                            <button class="more">+</button>
+                            <i class="bi bi-trash-fill" class="trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="thirdColumn">
+                    <p class="price">400 </p>€
+                </div>
+            </div>
 
 
+            <div class="bodyKart">
+                <div class="secondColumn produits">
+                    <img src="assets/img/affiche-lunettes2.webp" alt="img article" class="img">
+                    <div class="article">
+                        <span>description de l'article</span>
+                        <div class="choiceQuantity">
+                            <button class="less">-</button>
+                            <p class="quantity">1</p>
+                            <button class="more">+</button>
+                            <i class="bi bi-trash-fill" class="trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="thirdColumn">
+                    <p class="price">400 </p>€
+                </div>
+            </div>
+
+            <div class="footerKart">
+                <div class="totalText">
+                    <p>total</p>
+                </div>
+                <div class="thirdColumn">
+                    <p id="total">500 €</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
     <?php include('footer.php') ?>
+    <script src="assets/JS/kart.js" defer></script>
 </body>

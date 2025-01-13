@@ -37,7 +37,7 @@
         </div>
         <div class="guide_pict">
           <img
-            src="assets/img/entretien-lunettes.jpg"
+            src="assets/img/entretien-lunettes-en-corne-astuces-essentielles-1708421620.jpg"
             alt="Bien choisir ses lunettes"
             class="guide_img" />
           <p id="guide"><a href="glasses.php">Guide pratique</a></p>

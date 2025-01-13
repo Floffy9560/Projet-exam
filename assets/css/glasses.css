@@ -8,7 +8,7 @@ main {
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 0 15px;
-  background: rgba(172, 176, 175, 0.7);
+  background: whitesmoke;
   padding: 1rem;
   margin: 2rem auto;
 }
@@ -46,6 +46,7 @@ li {
   background-size: 1.5vw 1.5vw;
   background-repeat: no-repeat;
   font-size: 1.5vw;
+  line-height: ;
   color: #333333;
 }
 .DMLA {
@@ -53,7 +54,7 @@ li {
   font-size: 1.2vw;
   margin: auto;
   margin-top: 4vh;
-  color: whitesmoke;
+  color: rgba(172, 176, 175, 1);
   background: #ab8007;
 }
 ul,
@@ -92,11 +93,12 @@ a {
   padding: 1rem;
   border-radius: 10px;
   left: 50%;
-  top: 200px;
+  top: 100px;
   background: rgba(172, 176, 175, 0.9);
   transform: translateX(-500%);
   transition: transform 0.3s ease-in-out;
-  z-index: 555;
+  z-index: 600;
+  max-width: 200px;
 }
 .sideNav.open {
   transform: translateX(-50%);
@@ -114,7 +116,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease-in-out;
@@ -133,20 +135,27 @@ h6 a {
   font-size: 1rem;
 }
 
-.book {
-  position: fixed;
-  top: 50%;
-  left: 1rem;
-  cursor: pointer;
-  z-index: 1000;
+.navigateIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 50px;
+  width: 100%;
+  z-index: 500;
+  padding: 5px;
+  border-radius: 10px;
 }
-.bi-arrow-bar-up {
-  position: fixed;
-  top: 50%;
-  right: 1rem;
+
+.bi-arrow-bar-up,
+.bi-book {
   cursor: pointer;
-  z-index: 1000;
+  z-index: 500;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  background-color: #ab8007;
 }
 .bi {
-  font-size: 3rem;
+  font-size: 30px;
 }
