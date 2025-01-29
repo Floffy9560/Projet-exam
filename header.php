@@ -1,9 +1,8 @@
 <header>
-
   <div class="smartphone-header">
     <div class="header-container">
       <div class="headerDiv">
-        <a href="headerDivindex.php"><img src="assets/img/logo-magasin.png" alt="shop logo" id="logo" /></a>
+        <a href="index.php"><img src="assets/img/logo-magasin.png" alt="shop logo" id="logo" /></a>
       </div>
       <div class="headerDiv">
         <i class="bi bi-list" id="bi-list"></i>
@@ -13,14 +12,27 @@
       </div>
     </div>
     <div class="burger-menu">
-      <a href="agenda.php">Prendre rendez-vous</a>
-      <a href="glasses.php">Guide pratique</a>
-      <a href="shop.php">Le magasin</a>
-      <a href="glasses.php">Recherche</a>
-      <a href="frams.php">Lunettes</a>
-      <a href="contactLenses.php">lentilles</a>
-      <a href="glasses.php">Compte</a>
-
+      <a href="agenda.php">
+        <p> rendez-vous</p>
+      </a>
+      <a href="glasses.php">
+        <p>Guide pratique</p>
+      </a>
+      <a href="shop.php">
+        <p>Le magasin</p>
+      </a>
+      <!--  <a href="#">
+        <p>Recherche</p>
+      </a> -->
+      <a href="frams.php">
+        <p>Lunettes</p>
+      </a>
+      <a href="contactLenses.php">
+        <p>lentilles</p>
+      </a>
+      <a href="inscription.php">
+        <p>Compte</p>
+      </a>
     </div>
   </div>
 
@@ -73,11 +85,6 @@
   <script>
     const biList = document.getElementById("bi-list");
     const burgerMenu = document.querySelector(".burger-menu");
-
-    burgerMenu.addEventListener('scroll', (e) => {
-      console.log('tu scroll!!');
-
-    })
 
     biList.addEventListener("click", () => {
       biList.classList.toggle("open");

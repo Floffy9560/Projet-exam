@@ -21,14 +21,32 @@
   <main>
     <div class="img">
       <img
-        src="assets/img/offre-lentilles.jpg"
+        src="assets/img/boite-lentille.png"
         alt="Lentilles"
         id="image" />
     </div>
-    <div class="container-contactLenses">
-      <label
-        for="Number of lenses
-              ">Combien de boîtes voulez-vous ?</label>
+    <div class="container-contactLenses-post-it">
+      <div class="contactLenses-post-it-scotch"></div>
+
+      <label for="correctionOD">Correction de l'oeil droit</label>
+      <select name="correctionOD" id="correctionOD">
+        <option value="1">- 1</option>
+        <option value="2">- 2</option>
+        <option value="3">- 3</option>
+        <option value="4">- 4</option>
+        <option value="5">- 5</option>
+      </select>
+
+      <label for="correctionOG">Correction de l'oeil gauche</label>
+      <select name="correctionOG" id="correctionOG">
+        <option value="1">- 1</option>
+        <option value="2">- 2</option>
+        <option value="3">- 3</option>
+        <option value="4">- 4</option>
+        <option value="5">- 5</option>
+      </select>
+
+      <label for="number">Combien de boîtes voulez-vous ?</label>
       <select name="number" id="number">
         <option value="" Nombres de boîtes></option>
         <option value="1">1</option>

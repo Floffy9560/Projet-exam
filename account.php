@@ -68,9 +68,9 @@
                     <div>
                         <p>nom de la commande</p>
                     </div>
-                    <div class="container-img-followOrder">
-                        <div class="imgOrder">
-                            <img src="assets/img/affiche-lunettes1.webp" alt="img de la commande">
+                    <div class="container-img-follow-order">
+                        <div class="container-img-order">
+                            <img src="assets/img/affiche-lunettes1.webp" alt="img de la commande" class="img-order">
                         </div>
                         <a href="">Suivie de ma commande</a>
                     </div>
@@ -88,9 +88,9 @@
                     <div>
                         <p>nom de la commande</p>
                     </div>
-                    <div class="container-img-followOrder">
-                        <div class="imgOrder">
-                            <img src="assets/img/affiche-lunettes1.webp" alt="img de la commande">
+                    <div class="container-img-follow-order">
+                        <div class="container-img-order">
+                            <img src="assets/img/affiche-lunettes1.webp" alt="img de la commande" class="img-order">
                         </div>
                     </div>
                 </div>

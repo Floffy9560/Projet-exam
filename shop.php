@@ -18,67 +18,103 @@
 <body>
   <?php include('header.php') ?>
   <main>
-    <div class="containerShop">
-      <div class="containerHourly">
-        <h2>Les Horaires</h2>
-        <table>
-          <tr>
-            <th>lundi</th>
+    <section>
+      <div class="story">
+        <div class="carousel">
+          <div class="slider">
+            <div class="slider-slide">
+              <img src="assets/img/vitrine-magasin.jpg" alt="image du magasin1" class="slider-img">
+            </div>
+            <div class="slider-slide">
+              <img src="assets/img/espace-de-vente.jpg" alt="image du magasin1" class="slider-img">
+            </div>
+            <div class="slider-slide">
+              <img src="assets/img/mur-de-lunettes.jpg" alt="image du magasin1" class="slider-img">
+            </div>
+            <div class="slider-slide">
+              <img src="assets/img/table-de-vente.jpg" alt="image du magasin1" class="slider-img">
+            </div>
+            <div class="slider-slide">
+              <img src="assets/img/affiche-magasin.jpg" alt="image du magasin1" class="slider-img">
+            </div>
+          </div>
+        </div>
 
-            <td colspan="2">
-              <span>10h00-12h30</span>
-              <span> 14h30-19h00</span>
-            </td>
-          </tr>
-          <tr>
-            <th>mardi</th>
-            <td colspan="2">
-              <span>10h00-12h30</span>
-              <span> 14h30-19h00</span>
-            </td>
-          </tr>
-          <tr>
-            <th>mercredi</th>
-            <td colspan="2">
-              <span>10h00-12h30</span>
-              <span> 14h30-19h00</span>
-            </td>
-          </tr>
-          <tr>
-            <th>jeudi</th>
-            <td colspan="2">
-              <span>10h00-12h30</span>
-              <span> 14h30-19h00</span>
-            </td>
-          </tr>
-          <tr>
-            <th>vendredi</th>
-            <td colspan="2">
-              <span>10h00-12h30</span>
-              <span> 14h30-19h00</span>
-            </td>
-          </tr>
-          <tr>
-            <th>samedi</th>
-            <td colspan="2">
-              <span>10h00-12h30</span>
-              <span> 14h30-19h00</span>
-            </td>
-          </tr>
-        </table>
-        <button><a href="agenda.php">Prendre rendez-vous</a></button>
-      </div>
-      <div class="containerLocalisation">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.7424060830185!2d2.582741!3d49.205445999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e631d235fc8975%3A0x12d563c88a68ed24!2sOpticien%20Senlis%20-%20La%20Lunetterie%20Senlisienne!5e0!3m2!1sfr!2sfr!4v1735427994106!5m2!1sfr!2sfr"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="googleMaps" id="googleMaps"></iframe>
-        <div class="informations">
 
-          <p>11 Rue de l'Apport au Pain, 60300 Senlis</p>
-          <p>03 44 72 89 07</p>
-
+        <div class="story-speech-post-it">
+          <div class="scotch-story-speech"></div>
+          <p>
+            Opticien depuis 25 ans et passionné par mon métier, il apparaissait comme une évidence de m'installer dans la ville qui m'a vu grandir.
+            A La Lunetterie je vous propose des produits de qualité à tous les prix et pour la plupart Origine France Garantie.
+          </p>
         </div>
       </div>
-    </div>
+
+    </section>
+
+    <section>
+      <div class="containerShop">
+        <div class="containerHourly">
+          <h2>Les Horaires</h2>
+          <table>
+            <tr>
+              <th>lundi</th>
+
+              <td colspan="2">
+                <span>Fermé toute la journée</span>
+
+              </td>
+            </tr>
+            <tr>
+              <th>mardi</th>
+              <td colspan="2">
+                <span>09h30-13h00</span>
+                <span> 14h00-19h00</span>
+              </td>
+            </tr>
+            <tr>
+              <th>mercredi</th>
+              <td colspan="2">
+                <span>09h30-13h00</span>
+                <span> 14h00-19h00</span>
+              </td>
+            </tr>
+            <tr>
+              <th>jeudi</th>
+              <td colspan="2">
+                <span>09h30-13h00</span>
+                <span> 14h00-19h00</span>
+              </td>
+            </tr>
+            <tr>
+              <th>vendredi</th>
+              <td colspan="2">
+                <span>09h30-13h00</span>
+                <span> 14h00-19h00</span>
+              </td>
+            </tr>
+            <tr>
+              <th>samedi</th>
+              <td colspan="2">
+                <span>09h30-13h00</span>
+                <span> 14h00-18h00</span>
+              </td>
+            </tr>
+          </table>
+          <button><a href="agenda.php">Prendre rendez-vous</a></button>
+        </div>
+        <div class="containerLocalisation">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.7424060830185!2d2.582741!3d49.205445999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e631d235fc8975%3A0x12d563c88a68ed24!2sOpticien%20Senlis%20-%20La%20Lunetterie%20Senlisienne!5e0!3m2!1sfr!2sfr!4v1735427994106!5m2!1sfr!2sfr"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="googleMaps" id="googleMaps"></iframe>
+          <div class="informations">
+
+            <p>11 Rue de l'Apport au Pain, 60300 Senlis</p>
+            <p>03 44 72 89 07</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <?php include('footer.php') ?>
   <script>
@@ -86,6 +122,29 @@
     google.addEventListener(`load`, () => {
       google.classList.add('rotate')
     })
+
+    /*----------------------------------
+    ------------slide photos------------
+    ----------------------------------*/
+
+    const slider = document.querySelector('.slider');
+    const sliderSlide = Array.from(slider.children);
+    const slideWidth = sliderSlide[0].getBoundingClientRect().width;
+
+    let currentIndex = 0;
+
+    function moveToSlide(index) {
+      slider.style.transform = `translateX(-${index * slideWidth}px)`;
+      currentIndex = index;
+    }
+
+    function autoSlide() {
+      const nextIndex = (currentIndex + 1) % sliderSlide.length;
+      moveToSlide(nextIndex);
+    }
+
+    // Auto-slide every 3 seconds
+    setInterval(autoSlide, 3000);
   </script>
 </body>
 

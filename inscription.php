@@ -41,7 +41,7 @@
               placeholder="Adresse mail"
               class="input" required />
 
-            <div class="label-passwors-custome">
+            <div class="label-passwors-customer">
               <label for="currentPasswordCustomer" id="r"></label>
               <input
                 type="current-password"
@@ -73,7 +73,7 @@
 
             <div class="civility_container">
 
-              <h5>Civilité :</h5>
+              <h3>Civilité :</h3>
               <div class="civility_choice">
                 <input
                   type="radio"
@@ -103,44 +103,58 @@
 
             <div class="containerIdentity">
 
-              <label for="lastname" id='labelLastname'></label>
-              <input
-                type="text"
-                name="lastname"
-                placeholder="Nom"
-                class="inputCivilityName"
-                id="lastname"
-                pattern="[A-Za-z]{3,}" minlength="2" required />
+              <div class="lastname">
+                <p id='labelLastname-tcheck'><i class="bi bi-check-circle-fill"></i></p>
+                <label for="lastname" id='labelLastname'></label>
+                <input
+                  type="text"
+                  name="lastname"
+                  placeholder="Nom"
+                  class="inputCivilityName"
+                  id="lastname"
+                  pattern="[A-Za-z]{3,}" minlength="2" required />
+              </div>
 
-              <label for="firstname" id='labelFirstname'></label>
-              <input
-                type="text"
-                name="firstname"
-                placeholder="Prénom"
-                class="inputCivilityName"
-                id="firstname"
-                pattern="[A-Za-z]{3,}" minlength="2" required />
+              <div class="firstname">
+                <p id='labelFirstname-tcheck'><i class="bi bi-check-circle-fill"></i></p>
+                <label for="firstname" id='labelFirstname'></label>
+                <input
+                  type="text"
+                  name="firstname"
+                  placeholder="Prénom"
+                  class="inputCivilityName"
+                  id="firstname"
+                  pattern="[A-Za-z]{3,}" minlength="2" required />
+              </div>
+
             </div>
 
-            <label for="email" id="labelEmail"></label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Adresse mail"
-              class="input"
-              id="email"
-              pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-              minlength="2" title="Veuillez renseigner un email valide" required />
+            <div class="email">
+              <p id="email-tcheck"><i class="bi bi-check-circle-fill"></i></p>
+              <label for="email" id="labelEmail"></label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Adresse mail"
+                class="input"
+                id="email"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                minlength="2" title="Veuillez renseigner un email valide" required />
+            </div>
 
-            <label for="adressT" id="adress"></label>
-            <textarea
-              name="postal_adress"
-              placeholder="Adresse postale"
-              class="input"
-              id="adressT"
-              required></textarea>
+            <div class="postal-adress">
+              <p id="postal-adress-tcheck"><i class="bi bi-check-circle-fill"></i></p>
+              <label for="adressT" id="labelAdress"></label>
+              <textarea
+                name="postal_adress"
+                placeholder="Adresse postale"
+                class="input"
+                id="adressT"
+                required></textarea>
+            </div>
 
-            <div class="label-passwors-custome">
+            <div class="password">
+              <p id="password-tcheck"><i class="bi bi-check-circle-fill"></i></p>
               <label for="currentPassword" id="labelPassword"></label>
               <input
                 type="password"
@@ -309,16 +323,21 @@
                 <option value="2025">2025</option>
               </select>
             </div>
-            <label for="tel" id='labelTel'>À quel numéro de téléphone le transporteur peut-il vous
-              contacter ?</label>
-            <input
-              type="tel"
-              id="tel"
-              name="tel"
-              placeholder="N° de téléphone"
-              class="inputTel"
-              pattern="^(?:\+33|0)(?:\s|-|\.)?[1-9](?:\s|-|\.|\d){8}$"
-              title="Ne saisir que des numéros" required />
+
+            <h5>À quel numéro de téléphone le transporteur peut-il vous contacter ?</i></h5>
+            <div class="tel">
+              <p id="tel-tcheck"><i class="bi bi-check-circle-fill"></i></p>
+              <label for="tel" id='labelTel'></label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="N° de téléphone"
+                class="inputTel"
+                pattern="^(?:\+33|0)(?:\s|-|\.)?[1-9](?:\s|-|\.|\d){8}$"
+                title="Ne saisir que des numéros" required />
+            </div>
+
           </div>
           <div class="confirmation_container">
             <div class="confirmation_container_div">

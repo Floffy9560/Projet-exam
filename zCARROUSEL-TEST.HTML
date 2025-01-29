@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrousel de photos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f3f3f3;
+      }
+
+      .carousel {
+        position: relative;
+        width: 80%;
+        max-width: 600px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Navigation */
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+
+      .carousel-btn {
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .carousel-btn:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/800?text=Image+1" alt="Image 1" />
+        </div>
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/800?text=Image+2" alt="Image 2" />
+        </div>
+        <div class="carousel-slide">
+          <img src="https://picsum.photos/1200?text=Image+3" alt="Image 3" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const track = document.querySelector(".carousel-track");
+      const slides = Array.from(track.children);
+      const slideWidth = slides[0].getBoundingClientRect().width;
+
+      let currentIndex = 0;
+
+      function moveToSlide(index) {
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+      }
+
+      function autoSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        moveToSlide(nextIndex);
+      }
+
+      // Auto-slide every 3 seconds
+      setInterval(autoSlide, 3000);
+    </script>
+  </body>
+</html>

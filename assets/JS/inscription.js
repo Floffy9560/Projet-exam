@@ -22,23 +22,29 @@ let regExAdress = document.getElementById("adressT");
 
 let regExTel = document.getElementById("tel");
 
-//---------------------------------------------------------//
-//------------recherche des labels------------------//
-//-------------------------------------------------------//
+//------------------------------------------------------------------------//
+//------------recherche des labels + logo de validation------------------//
+//----------------------------------------------------------------------//
 
 const labelMailCustomer = document.getElementById("label-customer-mail");
 
 const labelPassword = document.getElementById("labelPassword");
+const passwordTcheck = document.getElementById("password-tcheck");
 
 const labelFirstname = document.getElementById("labelFirstname");
+const labelFirstnameTcheck = document.getElementById("labelFirstname-tcheck");
 
 const labelLastname = document.getElementById("labelLastname");
+const labelLastnameTcheck = document.getElementById("labelLastname-tcheck");
 
 const labelTel = document.getElementById("labelTel");
+const telTcheck = document.getElementById("tel-tcheck");
 
 const labelEmail = document.getElementById("labelEmail");
+const emailTcheck = document.getElementById("email-tcheck");
 
 const labelAdress = document.getElementById("adress");
+const postalAdressTcheck = document.getElementById("postal-adress-tcheck");
 
 //--------------------------------------------------------------------------------------------------//
 //---------------------------email and password customer controle----------------------------------//
@@ -85,7 +91,7 @@ const adressRegex =
   } else {
     labelPassworsCustomer.style.color = "red";
     labelPassworsCustomer.innerText =
-      "Veuillez saisir un mot de passe qui contient au moin 8 caractères dont : 1 majuscule, un caractére spécial et un chiffre";
+      "Veuillez saisir un mot de passe qui contient au moins 8 caractères dont : 1 majuscule, un caractére spécial et un chiffre";
   }
   if (
     emailRegex.test(currentMailValue) &&
@@ -96,70 +102,96 @@ const adressRegex =
 });*/
 
 //--------------------------------------------------------------------------------------------------------------//
+//------------événement click sur l'oeil afin d'afficher ou de masquer le mot de passe-------------------------//
+//------------------------------------------------------------------------------------------------------------//
+
+const eye = document.getElementById("eye");
+const currentPassword = document.getElementById("currentPassword");
+const closeEye = document.getElementById("closeEye");
+
+eye.addEventListener("click", () => {
+  console.log("eye CLIKER");
+  if (currentPassword.type === "password") {
+    currentPassword.type = "text";
+  }
+  eye.classList.toggle("open");
+  closeEye.classList.toggle("open");
+});
+eye.addEventListener("click", () => {
+  console.log("closeEye CLIKER");
+  if (currentPassword.type === "text") {
+    currentPassword.type = "password";
+  }
+  eye.classList.toggle("open");
+  closeEye.classList.toggle("open");
+});
+
+//--------------------------------------------------------------------------------------------------------------//
 //------------événement click sur le btn submit pour la verification regex d'un nouveau client-----------------//
 //------------------------------------------------------------------------------------------------------------//
 
 btnSubmitNewCustomer.addEventListener("click", () => {
   const lastnameValue = regExLastname.value;
   localStorage.setItem("lastname", lastnameValue);
+
   if (lastnameRegex.test(lastnameValue)) {
-    labelLastname.style.color = "green";
-    labelLastname.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    labelLastnameTcheck.classList.add("open");
+    labelLastname.innerText = "";
   } else {
-    labelLastname.innerText = "Veillez saisir que des lettres";
-    labelLastname.style.color = "red";
+    labelLastname.innerText = "Veuillez ne saisir que des lettres";
+    labelLastnameTcheck.innerHTML = "";
   }
 
   const firstnameValue = regExFirstname.value;
   localStorage.setItem("firstname", firstnameValue);
   if (firstnameRegex.test(firstnameValue)) {
-    labelFirstname.style.color = "green";
-    labelFirstname.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    labelFirstnameTcheck.classList.add("open");
+    labelFirstname.innerText = "";
   } else {
-    labelFirstname.style.color = "red";
-    labelFirstname.innerText = "Veillez saisir que des lettres";
+    labelFirstname.innerText = "Veuillez saisir que des lettres";
+    labelFirstnameTcheck.innerHTML = "";
   }
 
   const telValue = regExTel.value;
   localStorage.setItem("tel", telValue);
   if (telRegex.test(telValue)) {
-    labelTel.style.color = "green";
-    labelTel.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    telTcheck.classList.add("open");
+    labelTel.innerText = "";
   } else {
-    labelTel.style.color = "red";
-    labelTel.innerText = "Veillez saisir que des chiffres";
+    labelTel.innerText = "Veuillez saisir que des chiffres";
+    telTcheck.innerHTML = "";
   }
 
   const emailValue = regExEmail.value;
   localStorage.setItem("email", emailValue);
   if (emailRegex.test(emailValue)) {
-    labelEmail.style.color = "green";
-    labelEmail.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    emailTcheck.classList.add("open");
+    labelEmail.innerText = "";
   } else {
-    labelEmail.style.color = "red";
     labelEmail.innerText =
       "L'email est invalide ! veuillez saisir le format : exemple@exemple.fr";
+    emailTcheck.innerHTML = "";
   }
 
   const currentPasswordValue = regExCurrentPassword.value;
   localStorage.setItem("password", currentPasswordValue);
   if (currentPasswordRegex.test(currentPasswordValue)) {
-    labelPassword.style.color = "green";
-    labelPassword.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    passwordTcheck.classList.add("open");
+    labelPassword.innerText = "";
   } else {
-    labelPassword.style.color = "red";
     labelPassword.innerText =
-      "Veuillez saisir un mot de passe qui contient au moin 8 caractères dont : 1 majuscule, un caractére spécial et un chiffre";
+      "Veuillez saisir un mot de passe qui contient au moins 8 caractères dont : 1 majuscule, un caractére spécial et un chiffre";
+    passwordTcheck.innerHTML = "";
   }
 
   const adressValue = regExAdress.value;
   localStorage.setItem("adress", adressValue);
   if (adressRegex.test(adressValue)) {
-    labelAdress.style.color = "green";
-    labelAdress.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    postalAdressTcheck.classList.add("open");
+    labelAdress.innerText = "";
   } else {
-    labelAdress.style.color = "red";
     labelAdress.innerText = "Veuillez saisir une adresse valide svp";
+    postalAdressTcheck.innerHTML = "";
   }
 });
 /*if (
@@ -169,9 +201,3 @@ btnSubmitNewCustomer.addEventListener("click", () => {
     return true;
   }
 });*/
-
-let eye = document.getElementById("eye");
-console.log(eye);
-
-let closeEye = document.getElementById("closeEye");
-console.log(closeEye);

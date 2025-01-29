@@ -1,28 +1,19 @@
 main {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-h1 {
-  margin: 25px auto;
-}
-
 .contenairKart {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 85%;
-  max-width: 900px;
-  /*box-shadow: 0px 0px 40px #306c60;*/
+  width: 95%;
+  max-width: 1200px;
   border-radius: 10px;
+  margin: 50px auto 40px auto;
 }
 
 .head {
   display: flex;
   width: 100%;
-  max-width: 900px;
   height: 70px;
   border-radius: 30px 30px 0 0;
   padding: 10px;
@@ -32,12 +23,11 @@ h1 {
 .bodyKart {
   display: flex;
   width: 100%;
-  max-width: 900px;
   background-color: #306c60;
   padding: 10px;
 }
 p {
-  font-size: 20px;
+  font-size: clamp(21px, 3vw, 31px);
 }
 .footerKart {
   display: flex;
@@ -45,8 +35,7 @@ p {
   justify-content: end;
   gap: 10px;
   width: 100%;
-  max-width: 900px;
-  height: 50px;
+  height: 60px;
   border-radius: 0 0 30px 30px;
   padding: 10px;
   background-color: #c89f36;
@@ -64,7 +53,7 @@ p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  width: 90%;
+  width: 85%;
   min-width: 150px;
 }
 .thirdColumn {
@@ -72,7 +61,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 10%;
+  width: 15%;
   min-width: 40px;
 }
 .choiceQuantity {
@@ -112,8 +101,11 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: clamp(21px, 3vw, 31px);
+  height: clamp(21px, 3vw, 31px);
   border: none;
   background-color: #c89f36;
+}
+.trash {
+  font-size: clamp(21px, 3vw, 31px);
 }

@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "lato";
 }
 body {
   display: flex;
@@ -24,10 +25,11 @@ body:before {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 1;
-  background-image: url(../img/papierPNG.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  opacity: 0.7;
+  /*background-image: url(../img/papierPNG.png);*/
+  background-image: url(../img/fd-ecran-bois.jpeg);
+  background-size: contain;
+  background-repeat: repeat;
 }
 
 header {
@@ -35,20 +37,18 @@ header {
   display: flex;
   align-items: center;
 }
-
+a {
+  text-decoration: none;
+}
 .navLink {
   display: flex;
   justify-content: space-around;
-  text-decoration: none;
   color: #c89f36;
-  font-size: 2vw;
+  font-size: clamp(21px, 3vw, 31px);
   font-family: "Dancing Script";
   font-weight: bold;
 }
 
-a {
-  color: black;
-}
 /*-----------------------------------------------------------------------------*/
 /* -------------------------container logo-sidenav-search----------------------*/
 /*-----------------------------------------------------------------------------*/
@@ -169,21 +169,25 @@ footer {
   box-shadow: 0px -5px 10px #306c60;
 }
 .contact {
-  text-align: center;
+  display: flex;
+  gap: 20px;
 }
 .contact p {
-  font-size: 1.5vw;
+  color: #c89f36;
+}
+.bi-envelope-at-fill,
+.bi-telephone-forward-fill {
+  font-size: 35px;
   color: #c89f36;
 }
 
 .links-footer {
-  gap: 3rem;
+  gap: 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .container-follow {
-  width: 20rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -191,7 +195,6 @@ footer {
 .follow {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 2rem;
 }
 .logoFollow {
@@ -204,10 +207,25 @@ footer {
   font-size: 25px;
 }
 .copyrightLogo {
-  height: 2vw;
+  height: clamp(21px, 3vw, 31px);
 }
+
+/*------------------------------------
+----------popup contact and mail -----
+------------------------------------*/
+
+.popupTel,
+.popupMail {
+  display: none;
+}
+.popupTel.open,
+.popupMail.open {
+  display: block;
+  z-index: 600;
+}
+
 /*-------------------------------------------------------------------------------------------*/
-/*------------------------------------media queries smartphone ------------------------------*/
+/*------------------------------------media queries smartphone / tablette ------------------------------*/
 /*-------------------------------------------------------------------------------------------*/
 
 @media all and (max-width: 769px) {
@@ -248,10 +266,11 @@ footer {
     top: 25px;
     color: #c89f36;
     background-color: #1f413d;
-    z-index: 50;
+    z-index: 80;
   }
   .bi-basket3-fill {
     font-size: 45px;
+    color: #c89f36;
   }
   .headerDiv {
     display: flex;
@@ -263,8 +282,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 250px;
-    gap: 2rem;
+    padding-top: 150px;
+    gap: 25px;
     position: fixed;
     top: 0;
     transform: translateY(-150%);
@@ -275,16 +294,14 @@ footer {
   }
   .burger-menu.open {
     transform: translateY(0);
-    z-index: 45;
-  }
-  .burger-menu a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: #c89f36;
+    z-index: 70;
   }
 
-  .navLink {
-    font-size: 3vw;
+  .burger-menu p {
+    font-size: 31px;
+    /*text-decoration: none;*/
+    color: #c89f36;
+    z-index: 45;
   }
 
   /*-----------------------------------------------------*/
@@ -296,17 +313,5 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  .contact p {
-    font-size: 2vw;
-  }
-
-  .container-follow {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .copyrightLogo {
-    height: 3vw;
   }
 }

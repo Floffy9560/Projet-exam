@@ -11,7 +11,7 @@
 .inscription {
   width: 100%;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 15px;
   padding: 1rem 1.5em;
   margin-bottom: 1rem;
@@ -22,7 +22,7 @@
 .form_connection {
   /* On centre le formulaire */
   margin: auto;
-  padding: 1em;
+  padding: 10px;
   border-radius: 15px;
   background-color: #c89f36;
   color: #0a0a0a;
@@ -34,27 +34,23 @@
 }
 p {
   color: #e8f1f0;
+  font-size: 18px;
 }
 span {
   font-weight: bold;
   color: #c89f36;
 }
-.inputCivilityName {
-  width: 49%;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-  border: 1px solid #120d03;
-  border-radius: 10px;
-  height: 50px; /* Taille uniforme pour des champs */
-}
+
 h2 {
   color: #120d03;
   margin-bottom: 1rem;
   font-size: 30px;
 }
-h5 {
+h3 {
   font-size: 20px;
+}
+h6 {
+  margin-bottom: 10px;
 }
 .civility_container {
   /*On place les éléments en lignes*/
@@ -65,26 +61,83 @@ h5 {
   max-width: 400px;
   margin-bottom: 1rem;
 }
+
 .civility_choice {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
+
+.inputCivilityName {
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border: 1px solid #120d03;
+  border-radius: 10px;
+  height: 50px;
+}
+
 .containerIdentity {
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.lastname,
+.firstname,
+.email,
+.postal-adress,
+.tel,
+.password {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#labelLastname-tcheck,
+#labelFirstname-tcheck,
+#postal-adress-tcheck,
+#email-tcheck,
+#password-tcheck {
+  display: none;
+  position: absolute;
+  color: green;
+  top: 15px;
+  right: 15px;
+}
+#tel-tcheck {
+  display: none;
+  position: absolute;
+  color: green;
+  top: 12px;
+  left: 130px;
+}
+#labelLastname-tcheck.open,
+#labelFirstname-tcheck.open,
+#tel-tcheck.open,
+#postal-adress-tcheck.open,
+#email-tcheck.open,
+#password-tcheck.open {
+  display: block;
 }
 #labelLastname,
-#labelFirstname {
-  position: relative;
-  top: -30px;
+#labelFirstname,
+#labelEmail,
+#labelTel,
+#labelAdress,
+#labelPassword {
+  color: red;
+  font-weight: bold;
+  font-size: clamp(9px, 3vw, 17px);
+  background-color: rgba(255, 255, 255, 0.9);
 }
+
 .input {
   display: flex;
-  font-size: 1rem;
+  font-size: 15px;
   width: 100%;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
+  margin-bottom: 15px;
+  padding-left: 10px;
   border: 1px solid #120d03;
   border-radius: 10px;
   height: 50px; /* Taille uniforme pour des champs */
@@ -94,7 +147,6 @@ h5 {
   border: 1px solid #120d03;
   border-radius: 10px;
   padding-left: 1rem;
-  margin-top: 1rem;
 }
 select {
   margin: 1rem 1rem;
@@ -103,15 +155,24 @@ select {
   width: 100%;
   max-width: 100px;
 }
-.label-passwors-custome {
-  position: relative;
-  background-color: red;
-}
-.bi-eye-slash-fill,
-.bi-eye-fill {
+
+.bi {
   position: absolute;
   right: 15px;
   top: 18px;
+}
+
+#eye {
+  display: none;
+}
+#eye.open {
+  display: block;
+}
+#closeEye {
+  display: block;
+}
+#closeEye {
+  display: none;
 }
 
 /*---------------------------------------------------------------*/

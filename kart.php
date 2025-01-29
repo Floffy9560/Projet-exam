@@ -18,7 +18,6 @@
 <body>
     <?php include('header.php') ?>
     <main>
-        <h1>Votre panier</h1>
         <div class="contenairKart">
 
             <div class="head">
@@ -35,12 +34,12 @@
                             <button class="less">-</button>
                             <p class="quantity">1</p>
                             <button class="more">+</button>
-                            <i class="bi bi-trash-fill" class="trash"></i>
+                            <i class="bi bi-trash-fill trash"></i>
                         </div>
                     </div>
                 </div>
                 <div class="thirdColumn">
-                    <p class="price">400 </p>€
+                    <p class="price">400 € </p>
                 </div>
             </div>
 
@@ -54,12 +53,12 @@
                             <button class="less">-</button>
                             <p class="quantity">1</p>
                             <button class="more">+</button>
-                            <i class="bi bi-trash-fill" class="trash"></i>
+                            <i class="bi bi-trash-fill trash"></i>
                         </div>
                     </div>
                 </div>
                 <div class="thirdColumn">
-                    <p class="price">400 </p>€
+                    <p class="price">400 €</p>
                 </div>
             </div>
 

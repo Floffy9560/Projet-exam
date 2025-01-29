@@ -7,6 +7,7 @@
   <title>Guide pratique lunette</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Domine:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet" />
@@ -19,38 +20,67 @@
 
   <?php include('header.php') ?>
 
-  <div class="navigateIcon" id="book">
-    <i class="bi bi-book"></i>
+  <div class="navigateIcon">
+    <i class="bi bi-book" id="book"></i>
     <a href="#Haut de pages"><i class="bi bi-arrow-bar-up"></i></a>
   </div>
   <div class="sideNav" id="sideNav">
 
     <div class="searchOnPage">
-      <h5><a href="#Verres" class="linkMenu">Verres</a></h5>
-      <h6><a href="#Verres unifocaux" class="linkMenu">Unifocaux</a></h6>
-      <h6><a href="#Verres Progressifs" class="linkMenu">Progressifs</a></h6>
-      <h6><a href="#Verres Dégressifs" class="linkMenu">Dégressifs</a></h6>
+      <a href="#Verres" class="linkMenu">
+        <h5>Verres</h5>
+      </a>
+      <a href="#Verres unifocaux" class="linkMenu">
+        <h6>Unifocaux</h6>
+      </a>
+      <a href="#Verres Progressifs" class="linkMenu">
+        <h6>Progressifs</h6>
+      </a>
+      <a href="#Verres Dégressifs" class="linkMenu">
+        <h6>Dégressifs</h6>
+      </a>
     </div>
     <div class="searchOnPage">
-      <h5><a href="#Traitements" class="linkMenu">Traitements</a></h5>
-      <h6><a href="#Traitement anti-rayures" class="linkMenu">Anti-rayures</a></h6>
-      <h6><a href="#Traitement anti-reflets" class="linkMenu">Anti-reflets</a></h6>
-      <h6><a href="#Filtres anti-lumière bleue" class="linkMenu">Anti lumière bleu</a></h6>
-      <h6><a href="#Verres solaires" class="linkMenu">Solaires</a></h6>
+      <a href="#Traitements" class="linkMenu">
+        <h5>Traitements</h5>
+      </a>
+      <a href="#Traitement anti-rayures" class="linkMenu">
+        <h6>Anti-rayures</h6>
+      </a>
+      <a href="#Traitement anti-reflets" class="linkMenu">
+        <h6>Anti-reflets</h6>
+      </a>
+      <a href="#Filtres anti-lumière bleue" class="linkMenu">
+        <h6>Anti lumière bleu</h6>
+      </a>
+      <a href="#Verres solaires" class="linkMenu">
+        <h6>Solaires
+        </h6>
+      </a>
     </div>
     <div class="searchOnPage">
-      <h5><a href="#amétropies" class="linkMenu">Amétropie</a></h5>
-      <h6><a href="#HYPERMÉTROPE" class="linkMenu">Hypermétropie</a></h6>
-      <h6><a href="#ASTIGMATE" class="linkMenu">Astigmatisme</a></h6>
-      <h6><a href="#PRESBYTE" class="linkMenu">Presbytie</a></h6>
-      <h6><a href="#MYOPE" class="linkMenu">Myopie</a></h6>
+      <a href="#amétropies" class="linkMenu">
+        <h5>Amétropie</h5>
+      </a>
+      <a href="#HYPERMÉTROPE" class="linkMenu">
+        <h6>Hypermétropie</h6>
+      </a>
+      <a href="#ASTIGMATE" class="linkMenu">
+        <h6>Astigmatisme</h6>
+      </a>
+      <a href="#PRESBYTE" class="linkMenu">
+        <h6>Presbytie</h6>
+      </a>
+      <a href="#MYOPE" class="linkMenu">
+        <h6>Myopie</h6>
+      </a>
     </div>
   </div>
   <div class="overlay" id="overlay"></div>
   <main>
     <div class="main">
       <div class="prescription" id="Haut de pages">
-        <h2>Explication d'une ordonnace</h2>
+        <h2>Explication d'une ordonnance</h2>
         <div class="prescriptionImg">
           <img src="assets/img/explication-ordonnace.jpg" alt="prescription">
         </div>
@@ -138,7 +168,7 @@
         <li>vision de près</li>
       </ol>
       <p>
-        Ils peuvent corriger tout type d'<a href="amétropia.php">amétropie</a>
+        Ils peuvent corriger tout type d'amétropie
         : hypermétropie, myopie et astigmatisme.
       </p>
       <p><u>Ces verres sont :</u></p>
@@ -390,8 +420,6 @@
   <?php include('footer.php') ?>
   <script>
     const burger = document.getElementById("book");
-    console.log(book);
-
     const menu = document.getElementById("sideNav");
     const overlay = document.getElementById("overlay");
     const linkMenu = document.getElementsByClassName('linkMenu')
