@@ -14,10 +14,10 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 90%;
-  /*max-width: 900px;*/
+  width: 80%;
   margin: 50px auto;
 }
+
 h1 {
   font-size: clamp(60px, 8vw, 110px);
   font-family: "boecklins";
@@ -25,6 +25,7 @@ h1 {
   text-shadow: 2px 2px 2px black;
   font-weight: normal;
   line-height: 70px;
+  line-height: 130px;
 }
 
 /*----------------------------------------*/
@@ -47,7 +48,7 @@ section {
 
 .container_guide {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;

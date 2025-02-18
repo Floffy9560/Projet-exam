@@ -1,69 +1,69 @@
-/*------------------------------------*/
-/*              nom                */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*              nom                */
+// /*------------------------------------*/
 
-let lastname = localStorage.getItem("lastname");
+// let lastname = localStorage.getItem("lastname");
 
-const accountLastname = document.getElementById("accountLastname");
+// const accountLastname = document.getElementById("accountLastname");
 
-accountLastname.innerHTML = `<input type="text"  value="${lastname}" readonly>`;
+// accountLastname.innerHTML = `<input type="text"  value="${lastname}" readonly>`;
 
-/*------------------------------------*/
-/*              prénom                */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*              prénom                */
+// /*------------------------------------*/
 
-let firstname = localStorage.getItem("firstname");
+// let firstname = localStorage.getItem("firstname");
 
-const accountFirstname = document.getElementById("accountFirstname");
+// const accountFirstname = document.getElementById("accountFirstname");
 
-accountFirstname.innerHTML = `<input type="text" value="${firstname}" readonly>`;
+// accountFirstname.innerHTML = `<input type="text" value="${firstname}" readonly>`;
 
-/*------------------------------------*/
-/*                tel                 */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*                tel                 */
+// /*------------------------------------*/
 
-let tel = localStorage.getItem("tel");
+// let tel = localStorage.getItem("tel");
 
-const accountTel = document.getElementById("accountTel");
+// const accountTel = document.getElementById("accountTel");
 
-accountTel.innerHTML = `<input type="text"  value="${tel}" readonly>`;
+// accountTel.innerHTML = `<input type="text"  value="${tel}" readonly>`;
 
-/*------------------------------------*/
-/*               email                */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*               email                */
+// /*------------------------------------*/
 
-let email = localStorage.getItem("email");
+// let email = localStorage.getItem("email");
 
-const accountEmail = document.getElementById("accountEmail");
+// const accountEmail = document.getElementById("accountEmail");
 
-accountEmail.innerHTML = `<input type="email" value="${email}" readonly>`;
+// accountEmail.innerHTML = `<input type="email" value="${email}" readonly>`;
 
-/*------------------------------------*/
-/*             password               */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*             password               */
+// /*------------------------------------*/
 
-let password = localStorage.getItem("password");
+// let password = localStorage.getItem("password");
 
-const accountPassword = document.getElementById("accountPassword");
+// const accountPassword = document.getElementById("accountPassword");
 
-accountPassword.innerHTML = `<input type="password"  value="${password}" readonly>`;
+// accountPassword.innerHTML = `<input type="password"  value="${password}" readonly>`;
 
-/*------------------------------------*/
-/*              adress                */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*              adress                */
+// /*------------------------------------*/
 
-let adress = localStorage.getItem("adress");
+// let adress = localStorage.getItem("adress");
 
-const accountAdress = document.getElementById("accountAdress");
+// const accountAdress = document.getElementById("accountAdress");
 
-accountAdress.innerHTML = `<textarea readonly>${adress}</textarea>`;
+// accountAdress.innerHTML = `<textarea readonly>${adress}</textarea>`;
 
-/*------------------------------------*/
-/*        incrémentation card         */
-/*------------------------------------*/
+// /*------------------------------------*/
+// /*        incrémentation card         */
+// /*------------------------------------*/
 
-let cards = JSON.parse(localStorage.getItem("cards"));
+// let cards = JSON.parse(localStorage.getItem("cards"));
 
-let framsChoice = document.getElementById("framsChoice");
+// let framsChoice = document.getElementById("framsChoice");
 
-framsChoice.innerHTML = cards;
+// framsChoice.innerHTML = cards;

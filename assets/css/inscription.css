@@ -34,7 +34,7 @@
 }
 p {
   color: #e8f1f0;
-  font-size: 18px;
+  font-size: clamp(16px, 1.2vw, 40px);
 }
 span {
   font-weight: bold;
@@ -81,7 +81,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .lastname,
@@ -98,20 +98,15 @@ h6 {
 #labelFirstname-tcheck,
 #postal-adress-tcheck,
 #email-tcheck,
-#password-tcheck {
-  display: none;
-  position: absolute;
-  color: green;
-  top: 15px;
-  right: 15px;
-}
+#password-tcheck,
 #tel-tcheck {
   display: none;
   position: absolute;
   color: green;
-  top: 12px;
-  left: 130px;
+  top: 50%;
+  right: 10px;
 }
+
 #labelLastname-tcheck.open,
 #labelFirstname-tcheck.open,
 #tel-tcheck.open,
@@ -124,30 +119,36 @@ h6 {
 #labelFirstname,
 #labelEmail,
 #labelTel,
-#labelAdress,
-#labelPassword {
+#labelAdress {
+  visibility: hidden;
   color: red;
   font-weight: bold;
   font-size: clamp(9px, 3vw, 17px);
   background-color: rgba(255, 255, 255, 0.9);
+  text-wrap: nowrap;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .input {
   display: flex;
   font-size: 15px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding-left: 10px;
   border: 1px solid #120d03;
   border-radius: 10px;
   height: 50px; /* Taille uniforme pour des champs */
 }
+
 #tel {
+  width: 100%;
   height: 40px;
   border: 1px solid #120d03;
   border-radius: 10px;
-  padding-left: 1rem;
+  padding-left: 10px;
 }
+
 select {
   margin: 1rem 1rem;
   border-radius: 5px;
@@ -156,10 +157,16 @@ select {
   max-width: 100px;
 }
 
-.bi {
+.bi-check-circle-fill {
   position: absolute;
   right: 15px;
-  top: 18px;
+  top: 0;
+}
+.bi-eye-fill,
+.bi-eye-slash-fill {
+  position: absolute;
+  top: 55%;
+  right: 25px;
 }
 
 #eye {
@@ -171,10 +178,13 @@ select {
 #closeEye {
   display: block;
 }
-#closeEye {
+#closeEye.open {
   display: none;
 }
-
+.birth {
+  display: flex;
+  justify-content: space-between;
+}
 /*---------------------------------------------------------------*/
 /* On rajoute une mise en avant pour les éléments avec le focus. */
 /*---------------------------------------------------------------*/
@@ -222,8 +232,4 @@ textarea {
 .confirmation {
   height: 1rem;
   margin-right: 0.5rem;
-}
-
-#tel {
-  width: 10rem;
 }

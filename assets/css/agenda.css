@@ -1,3 +1,6 @@
+p {
+  font-size: clamp(16px, 1.5vw, 40px);
+}
 section {
   display: flex;
   flex-wrap: wrap;
@@ -8,8 +11,9 @@ section {
   margin: 50px auto 50px auto;
 }
 .calendarContainer {
-  width: 48%;
-  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 320px;
   border-radius: 15px;
   background-color: #306c60;
 }
@@ -32,11 +36,12 @@ table {
   padding: 15px;
   background-color: #c89f36;
   text-align: center;
+  font-size: 20px;
+  min-height: 400px;
 }
 
 td {
-  height: 50px;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 .footer {
@@ -56,17 +61,20 @@ td {
   font-weight: bold;
 }
 
+/* ---------------------------------------------------------------------------------- */
 /* ------------------------------ container prise de rdv --------------------------- */
+/* -------------------------------------------------------------------------------- */
+
 .priseDeRendezVous {
   width: 40%;
-  min-width: 280px;
+  min-width: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 20px;
 }
 .dateChoisi {
-  min-width: 300px;
+  min-width: 310px;
   height: 5rem;
   font-size: 25px;
   display: flex;
@@ -78,16 +86,17 @@ td {
 .hourOfDate {
   display: flex;
   flex-wrap: wrap;
-  min-height: 15rem;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 10px;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 10px;
   background-color: #c89f36;
+  width: 310px;
 }
 .hourOfDate span {
-  width: 5rem;
+  width: 100px;
   min-width: 30px;
-  height: 3rem;
+  height: 50px;
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -100,8 +109,8 @@ td {
   width: 100%;
 }
 .rdv {
-  width: 10rem;
-  height: 5rem;
+  width: 310px;
+  height: 80px;
   font-size: 25px;
   border-radius: 10px;
   color: #c89f36;

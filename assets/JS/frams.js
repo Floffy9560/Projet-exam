@@ -24,12 +24,12 @@ overlay.addEventListener("click", () => {
 /*-------------------------------------recuperation JSON--------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
 
-fetch("glasses.json")
+fetch("/assets/datas/glasses.json")
   .then((response) => response.json()) // Convertir la réponse en JSON
 
   .then((glasses) => {
     glasses.forEach((glass) => {
-      const container = document.querySelector(".containerCards");
+      const containerCards = document.querySelector(".containerCards");
       const glassCard = document.createElement("div");
       glassCard.classList.add("cards");
 
@@ -43,7 +43,7 @@ fetch("glasses.json")
         <button class="buttonPushKart">Ajouté au panier</button>
       `;
 
-      container.appendChild(glassCard);
+      containerCards.appendChild(glassCard);
       heartChoice();
     });
   })
@@ -67,12 +67,13 @@ buttonFilter.addEventListener("click", () => {
     'input[type="checkbox"]:checked'
   );
 
+  //Mettres les valeurs en minuscule pour facilité la recherche
   const checkboxValues = Array.from(checkedBoxes).map((input) =>
     input.value.toLowerCase()
   );
 
   // Charger les données depuis le fichier JSON
-  fetch("glasses.json")
+  fetch("/datas/glasses.json")
     .then((response) => response.json())
     .then((glasses) => {
       // Filtrer les lunettes en fonction des valeurs cochées
@@ -104,7 +105,7 @@ buttonFilter.addEventListener("click", () => {
             <button class="buttonPushKart">Ajouté au panier</button>
           `;
           glassCard.classList.add("cards");
-          // Ajouter la carte au conteneur principal
+          // Ajouter la/les carte(s) au conteneur principal
           containerCards.appendChild(glassCard);
           heartChoice();
         });
@@ -138,6 +139,7 @@ function heartChoice() {
       let tableau = JSON.parse(localStorage.getItem("cards")) || [];
 
       let currentCard = cards[index].outerHTML; // Récupérer le contenu de la carte associée
+      let cardIndex = cards[index];
 
       if (heart.style.color === "red") {
         // Ajouter la carte au tableau si elle n'est pas déjà dedans
@@ -146,7 +148,8 @@ function heartChoice() {
         }
       } else {
         // Retirer la carte du tableau si elle est désélectionnée
-        tableau = tableau.filter((card) => card !== currentCard);
+        // tableau = tableau.filter((card) => card !== currentCard);
+        delete tableau[cardIndex];
       }
 
       // Sauvegarder le tableau dans le localStorage
@@ -159,7 +162,7 @@ function heartChoice() {
 }
 
 //-----------------------------------------------------------------//
-//-----------------réinitialiser les filtres------------------//
+//-----------------réinitialiser les filtres----------------------//
 //---------------------------------------------------------------//
 
 buttonReset.addEventListener("click", () => {

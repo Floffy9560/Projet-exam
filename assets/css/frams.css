@@ -26,7 +26,8 @@
   width: 300px;
   padding: 0.5rem;
   border: 2px solid;
-  background: #e0e0e0;
+  /* background: #e0e0e0; */
+  background-color: #c89f36;
   box-shadow: 10px 10px 15px;
   color: #424242;
   border-radius: 15px;

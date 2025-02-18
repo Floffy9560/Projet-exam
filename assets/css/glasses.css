@@ -13,7 +13,7 @@ main {
   margin: 2rem auto;
 }
 h2 {
-  font-size: clamp(35px, 4vw, 50px);
+  font-size: clamp(35px, 5vw, 50px);
   margin: 50px auto;
   color: #1e3a5f;
 }
@@ -30,9 +30,10 @@ h4 {
   text-decoration: underline;
   color: #1e3a5f;
 }
+/* Attention trouver les bonne size du text : 16px 21px 40px pour le p  */
 p {
   margin: 15px auto;
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(16px, 1.5vw, 40px);
   color: whitesmoke;
 }
 li {
@@ -43,7 +44,8 @@ li {
   background-position: 0 0;
   background-size: 23px 23px;
   background-repeat: no-repeat;
-  font-size: clamp(16px, 3vw, 20px);
+  /* font-size: clamp(16px, 3vw, 20px); */
+  font-size: clamp(16px, 1.5vw, 40px);
   color: whitesmoke;
 }
 .DMLA {

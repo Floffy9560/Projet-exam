@@ -23,7 +23,6 @@ section {
 .containerIdentity {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .identity {
@@ -41,6 +40,9 @@ section {
 
 label {
   display: block;
+}
+a {
+  color: #2c2c2c;
 }
 
 input,

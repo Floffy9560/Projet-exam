@@ -26,7 +26,8 @@ let regExTel = document.getElementById("tel");
 //------------recherche des labels + logo de validation------------------//
 //----------------------------------------------------------------------//
 
-const labelMailCustomer = document.getElementById("label-customer-mail");
+labelCustomerMail;
+const labelMailCustomer = document.getElementById("labelCustomerMail");
 
 const labelPassword = document.getElementById("labelPassword");
 const passwordTcheck = document.getElementById("password-tcheck");
@@ -43,7 +44,7 @@ const telTcheck = document.getElementById("tel-tcheck");
 const labelEmail = document.getElementById("labelEmail");
 const emailTcheck = document.getElementById("email-tcheck");
 
-const labelAdress = document.getElementById("adress");
+const labelAdress = document.getElementById("labelAdress");
 const postalAdressTcheck = document.getElementById("postal-adress-tcheck");
 
 //--------------------------------------------------------------------------------------------------//
@@ -72,16 +73,26 @@ const adressRegex =
 //------------événement click sur le btn submit pour la verification regex d'un client éxistant-----------------//
 //-------------------------------------------------------------------------------------------------------------//
 
-/*btnSubmitCustomer.addEventListener("click", (event) => {
+btnSubmitCustomer.addEventListener("click", (event) => {
   event.preventDefault();
   const currentMailValue = regExCurrentMail.value;
-
   if (emailRegex.test(currentMailValue)) {
-    labelMailCustomer.innerHTML = `<i class="bi bi-check-circle-fill"></i>`;
+    emailCustomerTcheck.classList.add("open");
+    labelEmail.style.visibility = "hidden";
   } else {
     labelMailCustomer.innerText =
       "L'email est invalide ! veuillez saisir le format : exemple@exemple.fr";
     labelMailCustomer.style.color = "red";
+  }
+
+  const emailValue = regExEmail.value;
+  localStorage.setItem("email", emailValue);
+  if (emailRegex.test(emailValue)) {
+    emailTcheck.classList.add("open");
+    labelEmail.style.visibility = "hidden";
+  } else {
+    labelEmail.style.visibility = "visible";
+    emailTcheck.innerHTML = "";
   }
 
   const currentPasswordValue = regExCurrentPassword.value;
@@ -99,7 +110,7 @@ const adressRegex =
   ) {
     return true;
   }
-});*/
+});
 
 //--------------------------------------------------------------------------------------------------------------//
 //------------événement click sur l'oeil afin d'afficher ou de masquer le mot de passe-------------------------//
@@ -108,9 +119,10 @@ const adressRegex =
 const eye = document.getElementById("eye");
 const currentPassword = document.getElementById("currentPassword");
 const closeEye = document.getElementById("closeEye");
+console.log(closeEye);
+console.log(eye);
 
-eye.addEventListener("click", () => {
-  console.log("eye CLIKER");
+closeEye.addEventListener("click", () => {
   if (currentPassword.type === "password") {
     currentPassword.type = "text";
   }
@@ -118,7 +130,6 @@ eye.addEventListener("click", () => {
   closeEye.classList.toggle("open");
 });
 eye.addEventListener("click", () => {
-  console.log("closeEye CLIKER");
   if (currentPassword.type === "text") {
     currentPassword.type = "password";
   }
@@ -130,15 +141,16 @@ eye.addEventListener("click", () => {
 //------------événement click sur le btn submit pour la verification regex d'un nouveau client-----------------//
 //------------------------------------------------------------------------------------------------------------//
 
+// en cliquant sur le boutton si les caractères sont corrects faire apparaitre le logo sinon faire apparaitre le text
 btnSubmitNewCustomer.addEventListener("click", () => {
   const lastnameValue = regExLastname.value;
   localStorage.setItem("lastname", lastnameValue);
 
   if (lastnameRegex.test(lastnameValue)) {
     labelLastnameTcheck.classList.add("open");
-    labelLastname.innerText = "";
+    labelLastname.style.visibility = "hidden";
   } else {
-    labelLastname.innerText = "Veuillez ne saisir que des lettres";
+    labelLastname.style.visibility = "visible";
     labelLastnameTcheck.innerHTML = "";
   }
 
@@ -146,9 +158,9 @@ btnSubmitNewCustomer.addEventListener("click", () => {
   localStorage.setItem("firstname", firstnameValue);
   if (firstnameRegex.test(firstnameValue)) {
     labelFirstnameTcheck.classList.add("open");
-    labelFirstname.innerText = "";
+    labelFirstname.style.visibility = "hidden";
   } else {
-    labelFirstname.innerText = "Veuillez saisir que des lettres";
+    labelFirstname.style.visibility = "visible";
     labelFirstnameTcheck.innerHTML = "";
   }
 
@@ -156,9 +168,9 @@ btnSubmitNewCustomer.addEventListener("click", () => {
   localStorage.setItem("tel", telValue);
   if (telRegex.test(telValue)) {
     telTcheck.classList.add("open");
-    labelTel.innerText = "";
+    labelTel.style.visibility = "hidden";
   } else {
-    labelTel.innerText = "Veuillez saisir que des chiffres";
+    labelTel.style.visibility = "visible";
     telTcheck.innerHTML = "";
   }
 
@@ -166,10 +178,9 @@ btnSubmitNewCustomer.addEventListener("click", () => {
   localStorage.setItem("email", emailValue);
   if (emailRegex.test(emailValue)) {
     emailTcheck.classList.add("open");
-    labelEmail.innerText = "";
+    labelEmail.style.visibility = "hidden";
   } else {
-    labelEmail.innerText =
-      "L'email est invalide ! veuillez saisir le format : exemple@exemple.fr";
+    labelEmail.style.visibility = "visible";
     emailTcheck.innerHTML = "";
   }
 
@@ -177,10 +188,11 @@ btnSubmitNewCustomer.addEventListener("click", () => {
   localStorage.setItem("password", currentPasswordValue);
   if (currentPasswordRegex.test(currentPasswordValue)) {
     passwordTcheck.classList.add("open");
-    labelPassword.innerText = "";
+    eye.style.visibility = "hidden";
+    closeEye.style.visibility = "hidden";
+    labelPassword.style.visibility = "hidden";
   } else {
-    labelPassword.innerText =
-      "Veuillez saisir un mot de passe qui contient au moins 8 caractères dont : 1 majuscule, un caractére spécial et un chiffre";
+    labelPassword.style.visibility = "visible";
     passwordTcheck.innerHTML = "";
   }
 
@@ -188,9 +200,9 @@ btnSubmitNewCustomer.addEventListener("click", () => {
   localStorage.setItem("adress", adressValue);
   if (adressRegex.test(adressValue)) {
     postalAdressTcheck.classList.add("open");
-    labelAdress.innerText = "";
+    labelAdress.style.visibility = "hidden";
   } else {
-    labelAdress.innerText = "Veuillez saisir une adresse valide svp";
+    labelAdress.style.visibility = "visible";
     postalAdressTcheck.innerHTML = "";
   }
 });
